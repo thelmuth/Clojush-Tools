@@ -19,8 +19,18 @@ from sys import maxint
 #outputDirectory = "Results/bench-prog-synth/negative-to-zero/ehc-experiments/tourney/standard/"
 #outputDirectory = "Results/bench-prog-synth/negative-to-zero/ehc-experiments/tourney/standard-half-silenced/"
 #outputDirectory = "Results/bench-prog-synth/negative-to-zero/ehc-experiments/tourney/epigenetic-silence-mutation/"
-outputDirectory = "Results/bench-prog-synth/negative-to-zero/ehc-experiments/tourney/EHC/"
+#outputDirectory = "Results/bench-prog-synth/negative-to-zero/ehc-experiments/tourney/EHC/"
 #outputDirectory = "Results/bench-prog-synth/negative-to-zero/ehc-experiments/lexicase/standard/"
+
+### Baseline for benchmarks
+#outputDirectory = "Results/clustering-bench/number-io/baseline-uniform/logs/"
+#outputDirectory = "Results/clustering-bench/mirror-image/baseline-uniform/logs/"
+
+
+outputDirectory = "Results/clustering-bench/vector-average/lexicase/logs/"
+
+
+
 
 outputFilePrefix = "log"
 outputFileSuffix = ".txt"

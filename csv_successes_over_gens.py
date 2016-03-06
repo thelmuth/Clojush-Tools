@@ -46,10 +46,17 @@ error_threshold = 0
 # outputDirectory = "Results/bench-prog-synth/replace-space-with-newline/EHC-testing/ifs-7/"
 
 # *) Comparison of tournament selection runs limited by 3e10 point evaluations
-dirs = [("5-max-evals-3e10-silence-mut-off-tourney-7", "Results/bench-prog-synth/replace-space-with-newline-epiline-without-hill-climbing/max-evals-3e10-silence-mut-off/tourney-7/"),
-        ("3-max-evals-3e10-silence-mut-on-tourney-7", "Results/bench-prog-synth/replace-space-with-newline-epiline-without-hill-climbing/EHC-testing/tourney-7/"),
-        ("2-max-evals-3e10-silence-hill-climbing-tourney-7", "Results/bench-prog-synth/replace-space-with-newline-EHC/EHC-testing/tourney-7/")
-        ]
+#dirs = [("5-max-evals-3e10-silence-mut-off-tourney-7", "Results/bench-prog-synth/replace-space-with-newline-epiline-without-hill-climbing/max-evals-3e10-silence-mut-off/tourney-7/"),
+#        ("3-max-evals-3e10-silence-mut-on-tourney-7", "Results/bench-prog-synth/replace-space-with-newline-epiline-without-hill-climbing/EHC-testing/tourney-7/"),
+#        ("2-max-evals-3e10-silence-hill-climbing-tourney-7", "Results/bench-prog-synth/replace-space-with-newline-EHC/EHC-testing/tourney-7/")
+#        ]
+
+# Autoconstruction
+
+dirs = [("standard", "Results/bench-prog-synth/replace-space-with-newline/parent-selection/lexicase/"),
+        ("autoconstruction", "zzResults/autoconstruction/replace-space-with-newline/trial1/")]
+
+
 
 outputFilePrefix = "log"
 outputFileSuffix = ".txt"

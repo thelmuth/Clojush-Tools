@@ -11,14 +11,14 @@ from sys import maxint
 #outputDirectory = "Results/bench-prog-synth/collatz-numbers/parent-selection/lexicase/"
 #outputDirectory = "Results/bench-prog-synth/collatz-numbers/parent-selection/tourney-7/"
 #outputDirectory = "Results/bench-prog-synth/collatz-numbers/parent-selection/ifs-7/"
-##### NEED TO MOVE AFTER COMPLETION ################# !!!!!! ******* )()()()()()()_____++++++++++++++
-#outputDirectory = "Results/bench-prog-synth/collatz-numbers/more-evalpush-limit/lexicase/"
-#outputDirectory = "Results/bench-prog-synth/collatz-numbers/more-evalpush-limit/tourney-7/"
-#outputDirectory = "Results/bench-prog-synth/collatz-numbers/more-evalpush-limit/ifs-7/"
+#outputDirectory = "Results/bench-prog-synth/collatz-numbers/WORSE-small-evalpush-limit/lexicase/"
+#outputDirectory = "Results/bench-prog-synth/collatz-numbers/WORSE-small-evalpush-limit/tourney-7/"
+#outputDirectory = "Results/bench-prog-synth/collatz-numbers/WORSE-small-evalpush-limit/ifs-7/"
 
 #outputDirectory = "Results/bench-prog-synth/compare-string-lengths/parent-selection/lexicase/"
 #outputDirectory = "Results/bench-prog-synth/compare-string-lengths/parent-selection/tourney-7/"
 #outputDirectory = "Results/bench-prog-synth/compare-string-lengths/parent-selection/ifs-7/"
+#outputDirectory = "Results/bench-prog-synth/compare-string-lengths/NO-BETTER-more-train-cases/lexicase/logs/"
 
 #outputDirectory = "Results/bench-prog-synth/count-odds/parent-selection/lexicase/"
 #outputDirectory = "Results/bench-prog-synth/count-odds/parent-selection/tourney-7/"
@@ -51,6 +51,7 @@ from sys import maxint
 #outputDirectory = "Results/bench-prog-synth/negative-to-zero/parent-selection/lexicase/"
 #outputDirectory = "Results/bench-prog-synth/negative-to-zero/parent-selection/tourney-7/"
 #outputDirectory = "Results/bench-prog-synth/negative-to-zero/parent-selection/ifs-7/"
+#outputDirectory = "Results/clustering-bench/negative-to-zero/NO-BETTER-new-error-fn/lexicase/logs/"
 
 #outputDirectory = "Results/bench-prog-synth/number-io/parent-selection/lexicase/"
 #outputDirectory = "Results/bench-prog-synth/number-io/parent-selection/tourney-7/"
@@ -116,7 +117,7 @@ from sys import maxint
 
 #outputDirectory = "Results/bench-prog-synth/word-stats/parent-selection/lexicase/"
 #outputDirectory = "Results/bench-prog-synth/word-stats/parent-selection/tourney-7/"
-outputDirectory = "Results/bench-prog-synth/word-stats/parent-selection/ifs-7/"
+#outputDirectory = "Results/bench-prog-synth/word-stats/parent-selection/ifs-7/"
 
 ## Yuriy's problems
 
@@ -231,6 +232,233 @@ outputDirectory = "Results/bench-prog-synth/word-stats/parent-selection/ifs-7/"
 #outputDirectory = "Results/bench-prog-synth/replace-space-with-newline/multi-chance-lexicase/chances-90/"
 
 
+#######################################################################################
+########################### Clustering Experiments ####################################
+#######################################################################################
+
+#outputDirectory = "Results/clustering-bench/replace-space-with-newline/lexicase/logs/"
+#outputDirectory = "Results/clustering-bench/replace-space-with-newline/tourney-7/logs/"
+#outputDirectory = "Results/clustering-bench/replace-space-with-newline/ifs-7/logs/"
+#outputDirectory = "Results/clustering-bench/replace-space-with-newline/baseline-uniform/logs/"
+
+#outputDirectory = "Results/clustering-bench/syllables/lexicase/logs/"
+#outputDirectory = "Results/clustering-bench/syllables/tourney-7/logs/"
+#outputDirectory = "Results/clustering-bench/syllables/ifs-7/logs/"
+#outputDirectory = "Results/clustering-bench/syllables/baseline-uniform/logs/"
+
+#outputDirectory = "Results/clustering-bench/string-lengths-backwards/lexicase/logs/"
+#outputDirectory = "Results/clustering-bench/string-lengths-backwards/tourney-7/logs/"
+#outputDirectory = "Results/clustering-bench/string-lengths-backwards/ifs-7/logs/"
+#outputDirectory = "Results/clustering-bench/string-lengths-backwards/baseline-uniform/logs/"
+
+#outputDirectory = "Results/clustering-bench/negative-to-zero/lexicase/logs/"
+#outputDirectory = "Results/clustering-bench/negative-to-zero/tourney-7/logs/"
+#outputDirectory = "Results/clustering-bench/negative-to-zero/ifs-7/logs/"
+#outputDirectory = "Results/clustering-bench/negative-to-zero/baseline-uniform/logs/"
+
+#outputDirectory = "Results/clustering-bench/double-letters/lexicase/logs/"
+#outputDirectory = "Results/clustering-bench/double-letters/tourney-7/logs/"
+#outputDirectory = "Results/clustering-bench/double-letters/ifs-7/logs/"
+#outputDirectory = "Results/clustering-bench/double-letters/baseline-uniform/logs/"
+
+#outputDirectory = "Results/clustering-bench/scrabble-score/lexicase/logs/"
+#outputDirectory = "Results/clustering-bench/scrabble-score/tourney-7/logs/"
+#outputDirectory = "Results/clustering-bench/scrabble-score/ifs-7/logs/"
+#outputDirectory = "Results/clustering-bench/scrabble-score/baseline-uniform/logs/"
+
+#outputDirectory = "Results/clustering-bench/checksum/lexicase/logs/"
+#outputDirectory = "Results/clustering-bench/checksum/tourney-7/logs/"
+#outputDirectory = "Results/clustering-bench/checksum/ifs-7/logs/"
+#outputDirectory = "Results/clustering-bench/checksum/baseline-uniform/logs/"
+#outputDirectory = "Results/clustering-bench/checksum/more-test-cases/lexicase/logs/"
+
+#outputDirectory = "Results/clustering-bench/count-odds/lexicase/logs/"
+#outputDirectory = "Results/clustering-bench/count-odds/tourney-7/logs/"
+#outputDirectory = "Results/clustering-bench/count-odds/ifs-7/logs/"
+#outputDirectory = "Results/clustering-bench/count-odds/baseline-uniform/logs/"
+
+#outputDirectory = "Results/clustering-bench/vector-average/lexicase/logs/"
+#outputDirectory = "Results/clustering-bench/vector-average/tourney-7/logs/"
+#outputDirectory = "Results/clustering-bench/vector-average/baseline-uniform/logs/"
+#outputDirectory = "Results/clustering-bench/vector-average/more-test-cases/lexicase/logs/"
+
+#outputDirectory = "Results/clustering-bench/number-io/baseline-uniform/logs/"
+#outputDirectory = "Results/clustering-bench/mirror-image/baseline-uniform/logs/"
+#outputDirectory = "Results/clustering-bench/smallest/baseline-uniform/logs/"
+#outputDirectory = "Results/clustering-bench/median/baseline-uniform/logs/"
+#outputDirectory = "Results/clustering-bench/last-index-of-zero/baseline-uniform/logs/"
+#outputDirectory = "Results/clustering-bench/compare-string-lengths/baseline-uniform/logs/"
+#outputDirectory = "Results/clustering-bench/small-or-large/baseline-uniform/logs/"
+#outputDirectory = "Results/clustering-bench/sum-of-squares/baseline-uniform/logs/"
+#outputDirectory = "Results/clustering-bench/digits/baseline-uniform/logs/"
+#outputDirectory = "Results/clustering-bench/even-squares/baseline-uniform/logs/"
+#outputDirectory = "Results/clustering-bench/super-anagrams/baseline-uniform/logs/"
+#outputDirectory = "Results/clustering-bench/vectors-summed/baseline-uniform/logs/"
+#outputDirectory = "Results/clustering-bench/x-word-lines/baseline-uniform/logs/"
+#outputDirectory = "Results/clustering-bench/for-loop-index/baseline-uniform/logs/"
+#outputDirectory = "Results/clustering-bench/string-differences/baseline-uniform/logs/"
+#outputDirectory = "Results/clustering-bench/wallis-pi/baseline-uniform/logs/"
+#outputDirectory = "Results/clustering-bench/pig-latin/baseline-uniform/logs/"
+#outputDirectory = "Results/clustering-bench/word-stats/baseline-uniform/logs/"
+#outputDirectory = "Results/clustering-bench/grade/baseline-uniform/logs/"
+#outputDirectory = "Results/clustering-bench/collatz-numbers/baseline-uniform/logs/"
+
+#######################################################################################
+################# Deterministic Decimation (later called Elitist Survival)
+#######################################################################################
+
+#outputDirectory = "Results/clustering-bench/determin-decim/ratio-0.25/replace-space-with-newline/lexicase/logs/"
+#outputDirectory = "Results/clustering-bench/determin-decim/ratio-0.5/replace-space-with-newline/lexicase/logs/"
+#outputDirectory = "Results/clustering-bench/determin-decim/ratio-0.75/replace-space-with-newline/lexicase/logs/"
+#outputDirectory = "Results/clustering-bench/determin-decim/ratio-0.25/replace-space-with-newline/tourney-7/logs/"
+#outputDirectory = "Results/clustering-bench/determin-decim/ratio-0.5/replace-space-with-newline/tourney-7/logs/"
+#outputDirectory = "Results/clustering-bench/determin-decim/ratio-0.75/replace-space-with-newline/tourney-7/logs/"
+
+#outputDirectory = "Results/clustering-bench/determin-decim/ratio-0.25/vector-average/lexicase/logs/"
+#outputDirectory = "Results/clustering-bench/determin-decim/ratio-0.5/vector-average/lexicase/logs/"
+#outputDirectory = "Results/clustering-bench/determin-decim/ratio-0.75/vector-average/lexicase/logs/"
+#outputDirectory = "Results/clustering-bench/determin-decim/ratio-0.25/vector-average/tourney-7/logs/"
+#outputDirectory = "Results/clustering-bench/determin-decim/ratio-0.5/vector-average/tourney-7/logs/"
+#outputDirectory = "Results/clustering-bench/determin-decim/ratio-0.75/vector-average/tourney-7/logs/"
+
+#outputDirectory = "Results/clustering-bench/determin-decim/ratio-0.25/string-lengths-backwards/lexicase/logs/"
+#outputDirectory = "Results/clustering-bench/determin-decim/ratio-0.5/string-lengths-backwards/lexicase/logs/"
+#outputDirectory = "Results/clustering-bench/determin-decim/ratio-0.75/string-lengths-backwards/lexicase/logs/"
+#outputDirectory = "Results/clustering-bench/determin-decim/ratio-0.25/string-lengths-backwards/tourney-7/logs/"
+#outputDirectory = "Results/clustering-bench/determin-decim/ratio-0.5/string-lengths-backwards/tourney-7/logs/"
+#outputDirectory = "Results/clustering-bench/determin-decim/ratio-0.75/string-lengths-backwards/tourney-7/logs/"
+
+#outputDirectory = "Results/clustering-bench/determin-decim/ratio-0.25/negative-to-zero/lexicase/logs/"
+#outputDirectory = "Results/clustering-bench/determin-decim/ratio-0.5/negative-to-zero/lexicase/logs/"
+#outputDirectory = "Results/clustering-bench/determin-decim/ratio-0.75/negative-to-zero/lexicase/logs/"
+#outputDirectory = "Results/clustering-bench/determin-decim/ratio-0.25/negative-to-zero/tourney-7/logs/"
+#outputDirectory = "Results/clustering-bench/determin-decim/ratio-0.5/negative-to-zero/tourney-7/logs/"
+#outputDirectory = "Results/clustering-bench/determin-decim/ratio-0.75/negative-to-zero/tourney-7/logs/"
+
+#outputDirectory = "Results/clustering-bench/determin-decim/ratio-0.25/x-word-lines/lexicase/logs/"
+#outputDirectory = "Results/clustering-bench/determin-decim/ratio-0.5/x-word-lines/lexicase/logs/"
+#outputDirectory = "Results/clustering-bench/determin-decim/ratio-0.75/x-word-lines/lexicase/logs/"
+#outputDirectory = "Results/clustering-bench/determin-decim/ratio-0.25/x-word-lines/tourney-7/logs/"
+#outputDirectory = "Results/clustering-bench/determin-decim/ratio-0.5/x-word-lines/tourney-7/logs/"
+#outputDirectory = "Results/clustering-bench/determin-decim/ratio-0.75/x-word-lines/tourney-7/logs/"
+
+#outputDirectory = "Results/clustering-bench/determin-decim/ratio-0.25/syllables/lexicase/logs/"
+#outputDirectory = "Results/clustering-bench/determin-decim/ratio-0.5/syllables/lexicase/logs/"
+#outputDirectory = "Results/clustering-bench/determin-decim/ratio-0.75/syllables/lexicase/logs/"
+#outputDirectory = "Results/clustering-bench/determin-decim/ratio-0.25/syllables/tourney-7/logs/"
+#outputDirectory = "Results/clustering-bench/determin-decim/ratio-0.5/syllables/tourney-7/logs/"
+#outputDirectory = "Results/clustering-bench/determin-decim/ratio-0.75/syllables/tourney-7/logs/"
+
+#outputDirectory = "Results/clustering-bench/determin-decim/ratio-0.25/mirror-image/lexicase/logs/"
+#outputDirectory = "Results/clustering-bench/determin-decim/ratio-0.5/mirror-image/lexicase/logs/"
+#outputDirectory = "Results/clustering-bench/determin-decim/ratio-0.75/mirror-image/lexicase/logs/"
+#outputDirectory = "Results/clustering-bench/determin-decim/ratio-0.25/mirror-image/tourney-7/logs/"
+#outputDirectory = "Results/clustering-bench/determin-decim/ratio-0.5/mirror-image/tourney-7/logs/"
+#outputDirectory = "Results/clustering-bench/determin-decim/ratio-0.75/mirror-image/tourney-7/logs/"
+
+#outputDirectory = "Results/clustering-bench/determin-decim/ratio-0.25/count-odds/lexicase/logs/"
+#outputDirectory = "Results/clustering-bench/determin-decim/ratio-0.5/count-odds/lexicase/logs/"
+#outputDirectory = "Results/clustering-bench/determin-decim/ratio-0.75/count-odds/lexicase/logs/"
+#outputDirectory = "Results/clustering-bench/determin-decim/ratio-0.25/count-odds/tourney-7/logs/"
+#outputDirectory = "Results/clustering-bench/determin-decim/ratio-0.5/count-odds/tourney-7/logs/"
+#outputDirectory = "Results/clustering-bench/determin-decim/ratio-0.75/count-odds/tourney-7/logs/"
+
+#outputDirectory = "Results/clustering-bench/determin-decim/ratio-0.25/double-letters/lexicase/logs/"
+#outputDirectory = "Results/clustering-bench/determin-decim/ratio-0.5/double-letters/lexicase/logs/"
+#outputDirectory = "Results/clustering-bench/determin-decim/ratio-0.75/double-letters/lexicase/logs/"
+#outputDirectory = "Results/clustering-bench/determin-decim/ratio-0.25/double-letters/tourney-7/logs/"
+#outputDirectory = "Results/clustering-bench/determin-decim/ratio-0.5/double-letters/tourney-7/logs/"
+#outputDirectory = "Results/clustering-bench/determin-decim/ratio-0.75/double-letters/tourney-7/logs/"
+
+
+#######################################################################################
+############################### Lexicase Tournament Experiments #######################
+#######################################################################################
+
+#outputDirectory = "Results/clustering-bench/Lexicase-Tournament/keep-zeros/replace-space-with-newline/logs/"
+#outputDirectory = "Results/clustering-bench/Lexicase-Tournament/remove-zeros/replace-space-with-newline/logs/"
+
+#outputDirectory = "Results/clustering-bench/Lexicase-Tournament/keep-zeros/syllables/logs/"
+#outputDirectory = "Results/clustering-bench/Lexicase-Tournament/remove-zeros/syllables/logs/"
+
+#outputDirectory = "Results/clustering-bench/Lexicase-Tournament/keep-zeros/string-lengths-backwards/logs/"
+#outputDirectory = "Results/clustering-bench/Lexicase-Tournament/remove-zeros/string-lengths-backwards/logs/"
+
+#outputDirectory = "Results/clustering-bench/Lexicase-Tournament/keep-zeros/negative-to-zero/logs/"
+#outputDirectory = "Results/clustering-bench/Lexicase-Tournament/remove-zeros/negative-to-zero/logs/"
+
+# outputDirectory = "Results/clustering-bench/Lexicase-Tournament/keep-zeros/x-word-lines/logs/"
+#outputDirectory = "Results/clustering-bench/Lexicase-Tournament/remove-zeros/x-word-lines/logs/"
+
+# outputDirectory = "Results/clustering-bench/Lexicase-Tournament/keep-zeros/count-odds/logs/"
+#outputDirectory = "Results/clustering-bench/Lexicase-Tournament/remove-zeros/count-odds/logs/"
+
+# outputDirectory = "Results/clustering-bench/Lexicase-Tournament/keep-zeros/mirror-image/logs/"
+#outputDirectory = "Results/clustering-bench/Lexicase-Tournament/remove-zeros/mirror-image/logs/"
+
+# outputDirectory = "Results/clustering-bench/Lexicase-Tournament/keep-zeros/double-letters/logs/"
+#outputDirectory = "Results/clustering-bench/Lexicase-Tournament/remove-zeros/double-letters/logs/"
+
+# outputDirectory = "Results/clustering-bench/Lexicase-Tournament/keep-zeros/vector-average/logs/"
+#outputDirectory = "Results/clustering-bench/Lexicase-Tournament/remove-zeros/vector-average/logs/"
+
+
+#######################################################################################
+############################### Hyper Selection #######################
+#######################################################################################
+
+# outputDirectory = "Results/dissertation/Hyper-Selection-Tracking/double-letters/lexicase/logs/"
+# outputDirectory = "Results/dissertation/Hyper-Selection-Tracking/double-letters/tourney-7/logs/"
+
+# outputDirectory = "Results/dissertation/Hyper-Selection-Tracking/mirror-image/lexicase/logs/"
+# outputDirectory = "Results/dissertation/Hyper-Selection-Tracking/mirror-image/tourney-7/logs/"
+
+# outputDirectory = "Results/dissertation/Hyper-Selection-Tracking/count-odds/lexicase/logs/"
+# outputDirectory = "Results/dissertation/Hyper-Selection-Tracking/count-odds/tourney-7/logs/"
+
+# outputDirectory = "Results/dissertation/Hyper-Selection-Tracking/x-word-lines/lexicase/logs/"
+# outputDirectory = "Results/dissertation/Hyper-Selection-Tracking/x-word-lines/tourney-7/logs/"
+
+#outputDirectory = "Results/dissertation/Hyper-Selection-Tracking/vector-average/lexicase/logs/"
+# outputDirectory = "Results/dissertation/Hyper-Selection-Tracking/vector-average/tourney-7/logs/"
+
+#outputDirectory = "Results/dissertation/Hyper-Selection-Tracking/string-lengths-backwards/tourney-7/logs/"
+
+
+#######################################################################################
+############################### Autoconstruction ######################################
+#######################################################################################
+
+#outputDirectory = "Results/autoconstruction/replace-space-with-newline/trial1/"
+#outputDirectory = "Results/autoconstruction/syllables/trial1/"
+#outputDirectory = "Results/autoconstruction/string-differences/trial1/"
+
+#outputDirectory = "Results/autoconstruction/replace-space-with-newline/csv-printing/logs/"
+#outputDirectory = "Results/autoconstruction/replace-space-with-newline/csv-printing2/logs/"
+#outputDirectory = "Results/autoconstruction/replace-space-with-newline/csv-printing-better-parent-tracking/logs/"
+
+### Recursive variance
+#outputDirectory = "Results/autoconstruction/recursive-variance-v2/replace-space-with-newline/csv-printing/logs/"
+#outputDirectory = "Results/autoconstruction/recursive-variance-v3/replace-space-with-newline/csv-printing/logs/"
+
+### TMH
+outputDirectory = "Results/autoconstruction/recursive-variance-v3/string-differences/attempts-for-gptp-16/"
+#outputDirectory = "Results/autoconstruction/recursive-variance-v3/pig-latin/attempts-for-gptp-16/"
+#outputDirectory = "Results/autoconstruction/recursive-variance-v3/factorial/attempts-for-gptp-16/"
+#outputDirectory = "Results/autoconstruction/recursive-variance-v3/mux-6/attempts-for-gptp-16/"
+
+
+#######################################################################################
+############################### Genetic Operators #####################################
+#######################################################################################
+
+#outputDirectory = "Results/gptp-2016/genetic-operator-experiments/replace-space-with-newline/no-alternation"
+#outputDirectory = "Results/gptp-2016/genetic-operator-experiments/syllables/no-alternation"
+#outputDirectory = "Results/gptp-2016/genetic-operator-experiments/negative-to-zero/no-alternation"
+#outputDirectory = "Results/gptp-2016/genetic-operator-experiments//no-alternation"
+#outputDirectory = "Results/gptp-2016/genetic-operator-experiments//no-alternation"
+
+
 outputFilePrefix = "log"
 outputFileSuffix = ".txt"
 
@@ -239,6 +467,22 @@ outputFileSuffix = ".txt"
 #outputFilePrefix = "bio-normallog"
 
 errorType = "float"
+
+# Some functions
+def median(lst):
+    if len(lst) <= 0:
+        return False
+    sorts = sorted(lst)
+    length = len(lst)
+    if not length % 2:
+        return (sorts[length / 2] + sorts[length / 2 - 1]) / 2.0
+    return sorts[length / 2]
+
+def mean(nums):
+    if len(nums) <= 0:
+        return False
+    return sum(nums) / float(len(nums))
+
 
 # Main area
 i = 0
@@ -329,7 +573,6 @@ while (outputFilePrefix + str(i) + outputFileSuffix) in dirList:
             
     i += 1
 
-
 print "Error threshold per case:", errorThresholdPerCase
 print "-------------------------------------------------"
 
@@ -361,25 +604,48 @@ inds = 0
 perfectSolutions = 0
 perfectOnTestSet = 0
 simpPerfectOnTestSet = 0
+trainSolutionGens = []
+testSolutionGens = []
+
 for i, (gen, fitness, done) in enumerate(bestFitnessesOfRuns):
     if done:
         totalFitness += fitness
         inds += 1
         if fitness <= errorThresholdPerCase:
             perfectSolutions += 1
+            trainSolutionGens.append(gen)
             if len(testFitnessOfBest) > i:
                 if testFitnessOfBest[i] <= errorThresholdPerCase:
                     perfectOnTestSet += 1
+                    testSolutionGens.append(gen)
             if len(testFitnessOfSimplifiedBest) > i:
                 if testFitnessOfSimplifiedBest[i] <= errorThresholdPerCase:
                     simpPerfectOnTestSet += 1
 
+if len(trainSolutionGens) > 0:
+    print "------------------------------------------------------------"
+    print "Training Solution Generations:"
+    print "Mean:      ", mean(trainSolutionGens)
+    print "Minimum:   ", min(trainSolutionGens)
+    print "Median:    ", median(trainSolutionGens)
+    print "Maximum:   ", max(trainSolutionGens)
 
-print "--------------------"
+    if len(testSolutionGens) > 0:
+        print "--------------------------"
+        print "Test Solution Generations:"
+        print "Mean:      ", mean(testSolutionGens)
+        print "Minimum:   ", min(testSolutionGens)
+        print "Median:    ", median(testSolutionGens)
+        print "Maximum:   ", max(testSolutionGens)
+
+print "------------------------------------------------------------"
+
 print "Number of finished runs:            %4i" % inds
 print "Solutions found:                    %4i" % (perfectSolutions)
 print "Zero error on test set:             %4i" % perfectOnTestSet
 print "Simplified zero error on test set:  %4i" % simpPerfectOnTestSet
-print "-----"
+
+print "------------------------------------------------------------"
+
 if inds > 0:
     print "MBF: %.5f" % (totalFitness / float(inds))

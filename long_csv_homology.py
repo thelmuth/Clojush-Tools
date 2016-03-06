@@ -16,10 +16,17 @@ from sys import maxint
 
 ######## For EHC paper
 
-dirs = [("standard", "Results/bench-prog-synth/vector-average/ehc-experiments/tourney/standard/"),
-        ("standardHalfSilenced", "Results/bench-prog-synth/vector-average/ehc-experiments/tourney/standard-half-silenced/" ),
-        ("ESM", "Results/bench-prog-synth/vector-average/ehc-experiments/tourney/epigenetic-silence-mutation/"),
-        ("EHC", "Results/bench-prog-synth/vector-average/ehc-experiments/tourney/EHC/")]
+# dirs = [("standard", "Results/bench-prog-synth/vector-average/ehc-experiments/tourney/standard/"),
+#         ("standardHalfSilenced", "Results/bench-prog-synth/vector-average/ehc-experiments/tourney/standard-half-silenced/" ),
+#         ("ESM", "Results/bench-prog-synth/vector-average/ehc-experiments/tourney/epigenetic-silence-mutation/"),
+#         ("EHC", "Results/bench-prog-synth/vector-average/ehc-experiments/tourney/EHC/")]
+
+dirs = [("Baseline", "Results/bench-prog-synth/replace-space-with-newline/ehc-experiments/epiline-without-hill-climbing/max-evals-3e10-silence-mut-off/tourney-7/"),
+        ("Ep0", "Results/bench-prog-synth/replace-space-with-newline/ehc-experiments/tourney-7/standard-half-silenced/"),
+        ("EHC1", "Results/bench-prog-synth/replace-space-with-newline/ehc-experiments/tourney-7/EHC/"),
+        ("Ep1M", "Results/bench-prog-synth/replace-space-with-newline/ehc-experiments/epiline-without-hill-climbing/EHC-testing/tourney-7/")
+        ]
+
 
 
 outputFilePrefix = "log"

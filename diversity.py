@@ -10,7 +10,11 @@ print_ham = False
 #outputDirectory = "Results/bench-prog-synth/checksum/exploratory/lexicase/"
 #outputDirectory = "Results/bench-prog-synth/checksum/exploratory/two-tests-lexicase/"
 #outputDirectory = "Results/bench-prog-synth/checksum/exploratory/two-tests-better-lexicase/"
-outputDirectory = "Results/bench-prog-synth/checksum/exploratory/while-lexicase/"
+#outputDirectory = "Results/bench-prog-synth/checksum/exploratory/while-lexicase/"
+
+#outputDirectory = "Results/bench-prog-synth/replace-space-with-newline/parent-selection/lexicase/"
+
+outputDirectory = "Results/bench-prog-synth/vector-average/ehc-experiments/lexicase/standard/"
 
 outputFilePrefix = "log"
 outputFileSuffix = ".txt"
