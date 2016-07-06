@@ -441,22 +441,110 @@ from sys import maxint
 #outputDirectory = "Results/autoconstruction/recursive-variance-v2/replace-space-with-newline/csv-printing/logs/"
 #outputDirectory = "Results/autoconstruction/recursive-variance-v3/replace-space-with-newline/csv-printing/logs/"
 
-### TMH
-outputDirectory = "Results/autoconstruction/recursive-variance-v3/string-differences/attempts-for-gptp-16/"
+#outputDirectory = "Results/autoconstruction/recursive-variance-v3/string-differences/attempts-for-gptp-16/"
 #outputDirectory = "Results/autoconstruction/recursive-variance-v3/pig-latin/attempts-for-gptp-16/"
 #outputDirectory = "Results/autoconstruction/recursive-variance-v3/factorial/attempts-for-gptp-16/"
 #outputDirectory = "Results/autoconstruction/recursive-variance-v3/mux-6/attempts-for-gptp-16/"
 
+#outputDirectory = "Results/autoconstruction/recursive-variance-v3/recursively-variant-2replace-space-with-newline"
+
+#outputDirectory = "Results/autoconstruction/v3-recursive-variance/random-cases-per-generation/levenshtein/no-autoconstruction/"
+#outputDirectory = "Results/autoconstruction/v3-recursive-variance/random-cases-per-generation/levenshtein/yes-autoconstruction/"
+
+#outputDirectory = "Results/autoconstruction/v3-recursive-variance/random-cases-per-generation-10/levenshtein/autoconstruction-False/"
+#outputDirectory = "Results/autoconstruction/v3-recursive-variance/random-cases-per-generation-10/levenshtein/autoconstruction-True/"
+
+### Higher Diversification
+#outputDirectory = "Results/autoconstruction/v4-higher-diversification-threshold/replace-space-with-newline/autoconstruction-True/"
 
 #######################################################################################
-############################### Genetic Operators #####################################
+###### GPTP 16 - Plush ########
 #######################################################################################
 
+######### Genetic Operators #####################################
 #outputDirectory = "Results/gptp-2016/genetic-operator-experiments/replace-space-with-newline/no-alternation"
 #outputDirectory = "Results/gptp-2016/genetic-operator-experiments/syllables/no-alternation"
 #outputDirectory = "Results/gptp-2016/genetic-operator-experiments/negative-to-zero/no-alternation"
-#outputDirectory = "Results/gptp-2016/genetic-operator-experiments//no-alternation"
-#outputDirectory = "Results/gptp-2016/genetic-operator-experiments//no-alternation"
+#outputDirectory = "Results/gptp-2016/genetic-operator-experiments/x-word-lines/no-alternation"
+#outputDirectory = "Results/gptp-2016/genetic-operator-experiments/count-odds/no-alternation"
+
+#outputDirectory = "Results/gptp-2016/genetic-operator-experiments/replace-space-with-newline/no-close-mutation"
+#outputDirectory = "Results/gptp-2016/genetic-operator-experiments/syllables/no-close-mutation"
+#outputDirectory = "Results/gptp-2016/genetic-operator-experiments/negative-to-zero/no-close-mutation"
+#outputDirectory = "Results/gptp-2016/genetic-operator-experiments/count-odds/no-close-mutation"
+#outputDirectory = "Results/gptp-2016/genetic-operator-experiments/x-word-lines/no-close-mutation"
+
+#outputDirectory = "Results/gptp-2016/genetic-operator-experiments/replace-space-with-newline/no-uniform-mutation"
+#outputDirectory = "Results/gptp-2016/genetic-operator-experiments/syllables/no-uniform-mutation"
+#outputDirectory = "Results/gptp-2016/genetic-operator-experiments/negative-to-zero/no-uniform-mutation"
+#outputDirectory = "Results/gptp-2016/genetic-operator-experiments/count-odds/no-uniform-mutation"
+#outputDirectory = "Results/gptp-2016/genetic-operator-experiments/x-word-lines/no-uniform-mutation"
+
+#outputDirectory = "Results/gptp-2016/genetic-operator-experiments/replace-space-with-newline/only-uniform-mutation"
+#outputDirectory = "Results/gptp-2016/genetic-operator-experiments/syllables/only-uniform-mutation"
+#outputDirectory = "Results/gptp-2016/genetic-operator-experiments/negative-to-zero/only-uniform-mutation"
+#outputDirectory = "Results/gptp-2016/genetic-operator-experiments/count-odds/only-uniform-mutation"
+#outputDirectory = "Results/gptp-2016/genetic-operator-experiments/x-word-lines/only-uniform-mutation"
+
+#outputDirectory = "Results/gptp-2016/genetic-operator-experiments/replace-space-with-newline/only-uniform-mutation/csv-runs/logs/"
+
+######### No-Auto-Parens Runs ##################################
+#outputDirectory = "Results/gptp-2016/no-auto-parens/replace-space-with-newline"
+#outputDirectory = "Results/gptp-2016/no-auto-parens/negative-to-zero"
+#outputDirectory = "Results/gptp-2016/no-auto-parens/x-word-lines"
+#outputDirectory = "Results/gptp-2016/no-auto-parens/count-odds"
+#outputDirectory = "Results/gptp-2016/no-auto-parens/digits"
+
+#######################################################################################
+################ GECCO16 Diversity Workshop - Diversity Recovery ######################
+#######################################################################################
+
+#outputDirectory = "Results/GECCO16/diversity-recovery/storing-populations/lex-div-drop-25/replace-space-with-newline"
+#outputDirectory = "Results/GECCO16/diversity-recovery/storing-populations/lex-div-90/replace-space-with-newline"
+#outputDirectory = "Results/GECCO16/diversity-recovery/storing-populations/tourney-div-15/replace-space-with-newline"
+
+#outputDirectory = "Results/GECCO16/diversity-recovery/storing-populations/lex-div-drop-25/double-letters"
+#outputDirectory = "Results/GECCO16/diversity-recovery/storing-populations/lex-div-90/double-letters"
+#outputDirectory = "Results/GECCO16/diversity-recovery/storing-populations/tourney-div-15/double-letters"
+
+
+####################################
+# Diversity Recovery Continuations #
+####################################
+
+#outputDirectory = "Results/GECCO16/diversity-recovery/storing-populations/lex-div-drop-25/replace-space-with-newline/continuations/lexicase/run0/"
+#outputDirectory = "Results/GECCO16/diversity-recovery/storing-populations/lex-div-drop-25/replace-space-with-newline/continuations/tournament/run0/"
+
+#outputDirectory = "Results/GECCO16/diversity-recovery/storing-populations/lex-div-90/replace-space-with-newline/continuations/lexicase/run6/"
+#outputDirectory = "Results/GECCO16/diversity-recovery/storing-populations/lex-div-90/replace-space-with-newline/continuations/tournament/run6/"
+
+#outputDirectory = "Results/GECCO16/diversity-recovery/storing-populations/tourney-div-15/replace-space-with-newline/continuations/lexicase/run0/"
+#outputDirectory = "Results/GECCO16/diversity-recovery/storing-populations/tourney-div-15/replace-space-with-newline/continuations/tournament/run0/"
+
+##### Double Letters #####
+#------------------------#
+
+# outputDirectory = "Results/GECCO16/diversity-recovery/storing-populations/lex-div-drop-25/double-letters/continuations/lexicase/run0/"
+# outputDirectory = "Results/GECCO16/diversity-recovery/storing-populations/lex-div-drop-25/double-letters/continuations/tournament/run0/"
+
+# outputDirectory = "Results/GECCO16/diversity-recovery/storing-populations/lex-div-90/double-letters/continuations/lexicase/run0/"
+# outputDirectory = "Results/GECCO16/diversity-recovery/storing-populations/lex-div-90/double-letters/continuations/tournament/run0/"
+
+# outputDirectory = "Results/GECCO16/diversity-recovery/storing-populations/tourney-div-15/double-letters/continuations/lexicase/run0/"
+# outputDirectory = "Results/GECCO16/diversity-recovery/storing-populations/tourney-div-15/double-letters/continuations/tournament/run0/"
+
+
+#######################################################################################
+#### Sarah Troise's Runs: Weighted Lexicase Selection
+#######################################################################################
+
+# TMH
+
+#outputDirectory = "/home/stroise/results/weighted-lexicase/number-of-zeros/replace-space-with-newline/"
+outputDirectory = "/home/stroise/results/weighted-lexicase/number-of-zeros/syllables/"
+
+#outputDirectory = "/home/stroise/results/weighted-lexicase/number-of-zeros-inverse/replace-space-with-newline/"
+#outputDirectory = "/home/stroise/results/weighted-lexicase/number-of-zeros-inverse/syllables/"
 
 
 outputFilePrefix = "log"
@@ -505,7 +593,7 @@ while (outputFilePrefix + str(i) + outputFileSuffix) in dirList:
     #sys.stdout.write('.')
     #if i % 50 == 49:
     #    print
-    
+
     runs = i + 1 # After this loop ends, runs should be correct
     fileName = (outputFilePrefix + str(i) + outputFileSuffix)
     f = open(outputDirectory + fileName)

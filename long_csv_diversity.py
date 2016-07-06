@@ -18,18 +18,63 @@ from sys import maxint
 #         ("Ep1M", "Results/bench-prog-synth/replace-space-with-newline/ehc-experiments/epiline-without-hill-climbing/EHC-testing/tourney-7/")
 #         ]
 
-dirs = [("Baseline", "Results/bench-prog-synth/syllables/ehc-experiments/tourney/standard/"),
-        ("Ep0", "Results/bench-prog-synth/syllables/ehc-experiments/tourney/standard-half-silenced/"),
-        ("EHC1", "Results/bench-prog-synth/syllables/ehc-experiments/tourney/EHC/"),
-        ("Ep1M", "Results/bench-prog-synth/syllables/ehc-experiments/tourney/epigenetic-silence-mutation/")
+# dirs = [("Baseline", "Results/bench-prog-synth/syllables/ehc-experiments/tourney/standard/"),
+#         ("Ep0", "Results/bench-prog-synth/syllables/ehc-experiments/tourney/standard-half-silenced/"),
+#         ("EHC1", "Results/bench-prog-synth/syllables/ehc-experiments/tourney/EHC/"),
+#         ("Ep1M", "Results/bench-prog-synth/syllables/ehc-experiments/tourney/epigenetic-silence-mutation/")
+#         ]
+
+
+############ For GECCO16 Diversity Workshop - Diversity Recovery paper
+######## Replace Space With Newline
+### Div drop 25
+# dirs = [("Drop25-Run0-lexicase", "Results/GECCO16/diversity-recovery/storing-populations/lex-div-drop-25/replace-space-with-newline/continuations/lexicase/run0/"),
+#         ("Drop25-Run0-tournament", "Results/GECCO16/diversity-recovery/storing-populations/lex-div-drop-25/replace-space-with-newline/continuations/tournament/run0/")
+#         ]
+# dirs = [("Drop25-Run8-lexicase", "Results/GECCO16/diversity-recovery/storing-populations/lex-div-drop-25/replace-space-with-newline/continuations/lexicase/run8/"),
+#         ("Drop25-Run8-tournament", "Results/GECCO16/diversity-recovery/storing-populations/lex-div-drop-25/replace-space-with-newline/continuations/tournament/run8/")
+#         ]
+
+### Div > 90
+# dirs = [("Div90-Run6-lexicase", "Results/GECCO16/diversity-recovery/storing-populations/lex-div-90/replace-space-with-newline/continuations/lexicase/run6/"),
+#         ("Div90-Run6-tournament", "Results/GECCO16/diversity-recovery/storing-populations/lex-div-90/replace-space-with-newline/continuations/tournament/run6/")
+#         ]
+# dirs = [("Div90-Run10-lexicase", "Results/GECCO16/diversity-recovery/storing-populations/lex-div-90/replace-space-with-newline/continuations/lexicase/run10/"),
+#         ("Div90-Run10-tournament", "Results/GECCO16/diversity-recovery/storing-populations/lex-div-90/replace-space-with-newline/continuations/tournament/run10/")
+#         ]
+
+### tourney Div < 15
+# dirs = [("Div15-Run0-lexicase", "Results/GECCO16/diversity-recovery/storing-populations/tourney-div-15/replace-space-with-newline/continuations/lexicase/run0/"),
+#         ("Div15-Run0-tournament", "Results/GECCO16/diversity-recovery/storing-populations/tourney-div-15/replace-space-with-newline/continuations/tournament/run0/")
+#         ]
+# dirs = [("Div15-Run1-lexicase", "Results/GECCO16/diversity-recovery/storing-populations/tourney-div-15/replace-space-with-newline/continuations/lexicase/run1/"),
+#         ("Div15-Run1-tournament", "Results/GECCO16/diversity-recovery/storing-populations/tourney-div-15/replace-space-with-newline/continuations/tournament/run1/")
+#         ]
+
+####### Double Letters
+### Div drop 25
+# dirs = [("Drop25-Run0-lexicase", "Results/GECCO16/diversity-recovery/storing-populations/lex-div-drop-25/double-letters/continuations/lexicase/run0/"),
+#         ("Drop25-Run0-tournament", "Results/GECCO16/diversity-recovery/storing-populations/lex-div-drop-25/double-letters/continuations/tournament/run0/")
+#         ]
+# dirs = [("Drop25-Run21-lexicase", "Results/GECCO16/diversity-recovery/storing-populations/lex-div-drop-25/double-letters/continuations/lexicase/run21/"),
+#         ("Drop25-Run21-tournament", "Results/GECCO16/diversity-recovery/storing-populations/lex-div-drop-25/double-letters/continuations/tournament/run21/")
+#         ]
+
+### Div > 90
+# dirs = [("Div90-Run0-lexicase", "Results/GECCO16/diversity-recovery/storing-populations/lex-div-90/double-letters/continuations/lexicase/run0/"),
+#         ("Div90-Run0-tournament", "Results/GECCO16/diversity-recovery/storing-populations/lex-div-90/double-letters/continuations/tournament/run0/")
+#         ]
+# dirs = [("Div90-Run3-lexicase", "Results/GECCO16/diversity-recovery/storing-populations/lex-div-90/double-letters/continuations/lexicase/run3/"),
+#         ("Div90-Run3-tournament", "Results/GECCO16/diversity-recovery/storing-populations/lex-div-90/double-letters/continuations/tournament/run3/")
+#         ]
+
+### tourney Div < 15
+# dirs = [("Div15-Run0-lexicase", "Results/GECCO16/diversity-recovery/storing-populations/tourney-div-15/double-letters/continuations/lexicase/run0/"),
+#         ("Div15-Run0-tournament", "Results/GECCO16/diversity-recovery/storing-populations/tourney-div-15/double-letters/continuations/tournament/run0/")
+#         ]
+dirs = [("Div15-Run1-lexicase", "Results/GECCO16/diversity-recovery/storing-populations/tourney-div-15/double-letters/continuations/lexicase/run1/"),
+        ("Div15-Run1-tournament", "Results/GECCO16/diversity-recovery/storing-populations/tourney-div-15/double-letters/continuations/tournament/run1/")
         ]
-
-
-
-#outputDirectory = "Results/bench-prog-synth/syllables/ehc-experiments/tourney/standard/"                                                      
-#outputDirectory = "Results/bench-prog-synth/syllables/ehc-experiments/tourney/standard-half-silenced/"                                        
-#outputDirectory = "Results/bench-prog-synth/syllables/ehc-experiments/tourney/epigenetic-silence-mutation/"                                   
-#outputDirectory = "Results/bench-prog-synth/syllables/ehc-experiments/tourney/EHC/"   
 
 
 outputFilePrefix = "log"
@@ -76,10 +121,13 @@ def printBehavioralDiversitiesLong(method, outputDirectory):
             if line.startswith("Behavioral diversity:"):
                 behavioral_diversity = float(line.split()[-1])
 #                bd_list_per_gen[gen].append(bd)
+
+            if line.startswith("Error (vector) diversity:"):
+                error_vector_diversity = float(line.split()[-1])                
  
             if line.startswith("Number of point (instruction) evaluations so far:"):
                 point_evals = int(line.split()[-1])
-                print "%s,%i,%i,%i,%0.3f" % (method, run_num, gen, point_evals, behavioral_diversity)
+                print "%s,%i,%i,%i,%0.3f,%0.3f" % (method, run_num, gen, point_evals, behavioral_diversity, error_vector_diversity)
 
 
             if line.startswith("SUCCESS"):
@@ -97,7 +145,7 @@ def printBehavioralDiversitiesLong(method, outputDirectory):
 
 
 #print "method,run,generation,ptevals,behavioral_diversity"
-print "method,trial,generation,ptevals,unique_vectors"
+print "method,trial,generation,ptevals,behavioral_diversity,error_vector_diversity"
 
 for (method, directory) in dirs:
     printBehavioralDiversitiesLong(method, directory)

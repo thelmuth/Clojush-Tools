@@ -4,7 +4,8 @@ from sys import maxint
 
 # Set these before running:
 
-print_bd = True
+print_bd = False
+print_errordiv = True
 print_ham = False
 
 #outputDirectory = "Results/bench-prog-synth/checksum/exploratory/lexicase/"
@@ -14,7 +15,57 @@ print_ham = False
 
 #outputDirectory = "Results/bench-prog-synth/replace-space-with-newline/parent-selection/lexicase/"
 
-outputDirectory = "Results/bench-prog-synth/vector-average/ehc-experiments/lexicase/standard/"
+#outputDirectory = "Results/bench-prog-synth/vector-average/ehc-experiments/lexicase/standard/"
+
+
+######## Diversity Recovery trials
+## Drop 25
+#outputDirectory = "Results/GECCO16/diversity-recovery/storing-populations/lex-div-drop-25/replace-space-with-newline/continuations/lexicase/run0/"
+#outputDirectory = "Results/GECCO16/diversity-recovery/storing-populations/lex-div-drop-25/replace-space-with-newline/continuations/tournament/run0/"
+
+#outputDirectory = "Results/GECCO16/diversity-recovery/storing-populations/lex-div-drop-25/replace-space-with-newline/continuations/lexicase/run8/"
+#outputDirectory = "Results/GECCO16/diversity-recovery/storing-populations/lex-div-drop-25/replace-space-with-newline/continuations/tournament/run8/"
+
+## Div90
+#outputDirectory = "Results/GECCO16/diversity-recovery/storing-populations/lex-div-90/replace-space-with-newline/continuations/lexicase/run6/"
+#outputDirectory = "Results/GECCO16/diversity-recovery/storing-populations/lex-div-90/replace-space-with-newline/continuations/tournament/run6/"
+
+#outputDirectory = "Results/GECCO16/diversity-recovery/storing-populations/lex-div-90/replace-space-with-newline/continuations/lexicase/run10/"
+#outputDirectory = "Results/GECCO16/diversity-recovery/storing-populations/lex-div-90/replace-space-with-newline/continuations/tournament/run10/"
+
+## Tourney < 15
+#outputDirectory = "Results/GECCO16/diversity-recovery/storing-populations/tourney-div-15/replace-space-with-newline/continuations/lexicase/run0/"
+#outputDirectory = "Results/GECCO16/diversity-recovery/storing-populations/tourney-div-15/replace-space-with-newline/continuations/tournament/run0/"
+
+#outputDirectory = "Results/GECCO16/diversity-recovery/storing-populations/tourney-div-15/replace-space-with-newline/continuations/lexicase/run1/"
+#outputDirectory = "Results/GECCO16/diversity-recovery/storing-populations/tourney-div-15/replace-space-with-newline/continuations/tournament/run1/"
+
+
+##### Double Letters #####
+#------------------------#
+
+## Div Drop 25
+#outputDirectory = "Results/GECCO16/diversity-recovery/storing-populations/lex-div-drop-25/double-letters/continuations/lexicase/run0/"
+#outputDirectory = "Results/GECCO16/diversity-recovery/storing-populations/lex-div-drop-25/double-letters/continuations/tournament/run0/"
+
+#outputDirectory = "Results/GECCO16/diversity-recovery/storing-populations/lex-div-drop-25/double-letters/continuations/lexicase/run21/"
+#outputDirectory = "Results/GECCO16/diversity-recovery/storing-populations/lex-div-drop-25/double-letters/continuations/tournament/run21/"
+
+## Div 90
+#outputDirectory = "Results/GECCO16/diversity-recovery/storing-populations/lex-div-90/double-letters/continuations/lexicase/run0/"
+#outputDirectory = "Results/GECCO16/diversity-recovery/storing-populations/lex-div-90/double-letters/continuations/tournament/run0/"
+
+#outputDirectory = "Results/GECCO16/diversity-recovery/storing-populations/lex-div-90/double-letters/continuations/lexicase/run3/"
+#outputDirectory = "Results/GECCO16/diversity-recovery/storing-populations/lex-div-90/double-letters/continuations/tournament/run3/"
+
+## Tourney < 15
+#outputDirectory = "Results/GECCO16/diversity-recovery/storing-populations/tourney-div-15/double-letters/continuations/lexicase/run0/"
+#outputDirectory = "Results/GECCO16/diversity-recovery/storing-populations/tourney-div-15/double-letters/continuations/tournament/run0/"
+
+#outputDirectory = "Results/GECCO16/diversity-recovery/storing-populations/tourney-div-15/double-letters/continuations/lexicase/run1/"
+#outputDirectory = "Results/GECCO16/diversity-recovery/storing-populations/tourney-div-15/double-letters/continuations/tournament/run1/"
+
+
 
 outputFilePrefix = "log"
 outputFileSuffix = ".txt"
@@ -32,7 +83,11 @@ if outputDirectory[-1] != '/':
 dirList = os.listdir(outputDirectory)
 
 bd_list_per_gen = []
+evd_list_per_gen = []
 ham_list_per_gen = []
+
+print
+print outputDirectory
 
 while (outputFilePrefix + str(i) + outputFileSuffix) in dirList:
     #sys.stdout.write('.')
@@ -52,7 +107,9 @@ while (outputFilePrefix + str(i) + outputFileSuffix) in dirList:
             gen = int(line.split()[-1])
             while len(bd_list_per_gen) <= gen:
                 bd_list_per_gen.append([])
+                evd_list_per_gen.append([])
                 ham_list_per_gen.append([])
+
 
         if line.startswith("SUCCESS"):
             done = "SUCCESS"
@@ -66,6 +123,10 @@ while (outputFilePrefix + str(i) + outputFileSuffix) in dirList:
             bd = float(line.split()[-1])
             bd_list_per_gen[gen].append(bd)
 
+        if line.startswith("Error (vector) diversity:"):
+            evd = float(line.split()[-1])
+            evd_list_per_gen[gen].append(evd)
+
         if line.startswith("Mean Hamming distance between sampled"):
             ham = float(line.split()[-1])
             ham_list_per_gen[gen].append(ham)
@@ -73,15 +134,17 @@ while (outputFilePrefix + str(i) + outputFileSuffix) in dirList:
     i += 1
 
 
-
-print
-print outputDirectory
-
 if print_bd:
     print
     print "Mean Behavioral Diversity Each Generation Across Runs"
     for gen_bd in bd_list_per_gen:
         print "%0.3f" % (mean(gen_bd))
+
+if print_errordiv:
+    print
+    print "Mean Error Vector Diversity Each Generation Across Runs"
+    for gen_evd in evd_list_per_gen:
+        print "%0.3f" % (mean(gen_evd))
 
 if print_ham:
     print

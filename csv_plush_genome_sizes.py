@@ -108,7 +108,7 @@ def getProgramSizes(outputDirectory, outputFilePrefix):
             if line.startswith(";; -*- Report"):
                 gen = int(line.split()[-1])
 
-            if line.startswith("Average program size in population"):
+            if line.startswith("Average genome size in population (length)"):
                 mean_size = float(line.split()[-1])
                 sizes_per_gen[gen].append(mean_size)
 
@@ -118,7 +118,7 @@ def getProgramSizes(outputDirectory, outputFilePrefix):
 
 
 if csv_format == "long":
-    print "Condition,Generation,MeanProgramSize"
+    print "Condition,Generation,MeanGenomeSize"
     # for (condition, directory, prefix) in dirs:
     #     sizes = getProgramSizes(directory, prefix)
     for (condition, directory) in dirs:
