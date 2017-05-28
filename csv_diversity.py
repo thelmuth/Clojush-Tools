@@ -30,9 +30,9 @@ from sys import maxint
 #         ("Drop25-Run0-tournament", "Results/GECCO16/diversity-recovery/storing-populations/lex-div-drop-25/replace-space-with-newline/continuations/tournament/run0/")
 #         ]
 
-dirs = [("Drop25-Run8-lexicase", "Results/GECCO16/diversity-recovery/storing-populations/lex-div-drop-25/replace-space-with-newline/continuations/lexicase/run8/"),
-        ("Drop25-Run8-tournament", "Results/GECCO16/diversity-recovery/storing-populations/lex-div-drop-25/replace-space-with-newline/continuations/tournament/run8/")
-        ]
+# dirs = [("Drop25-Run8-lexicase", "Results/GECCO16/diversity-recovery/storing-populations/lex-div-drop-25/replace-space-with-newline/continuations/lexicase/run8/"),
+#         ("Drop25-Run8-tournament", "Results/GECCO16/diversity-recovery/storing-populations/lex-div-drop-25/replace-space-with-newline/continuations/tournament/run8/")
+#         ]
 
 
 # outputDirectory = "Results/GECCO16/diversity-recovery/storing-populations/lex-div-90/replace-space-with-newline/continuations/lexicase/run6/"
@@ -42,6 +42,7 @@ dirs = [("Drop25-Run8-lexicase", "Results/GECCO16/diversity-recovery/storing-pop
 # outputDirectory = "Results/GECCO16/diversity-recovery/storing-populations/tourney-div-15/replace-space-with-newline/continuations/tournament/run0/"
 
 
+dirs = [("100-diversity", "/home/ahmadh19/Results/enforced-diverse-pop/string-lengths-backwards/")]
 
 outputFilePrefix = "log"
 outputFileSuffix = ".txt"

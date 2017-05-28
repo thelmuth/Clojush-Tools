@@ -72,10 +72,11 @@ from sys import maxint
 # dirs = [("Div15-Run0-lexicase", "Results/GECCO16/diversity-recovery/storing-populations/tourney-div-15/double-letters/continuations/lexicase/run0/"),
 #         ("Div15-Run0-tournament", "Results/GECCO16/diversity-recovery/storing-populations/tourney-div-15/double-letters/continuations/tournament/run0/")
 #         ]
-dirs = [("Div15-Run1-lexicase", "Results/GECCO16/diversity-recovery/storing-populations/tourney-div-15/double-letters/continuations/lexicase/run1/"),
-        ("Div15-Run1-tournament", "Results/GECCO16/diversity-recovery/storing-populations/tourney-div-15/double-letters/continuations/tournament/run1/")
-        ]
+# dirs = [("Div15-Run1-lexicase", "Results/GECCO16/diversity-recovery/storing-populations/tourney-div-15/double-letters/continuations/lexicase/run1/"),
+#         ("Div15-Run1-tournament", "Results/GECCO16/diversity-recovery/storing-populations/tourney-div-15/double-letters/continuations/tournament/run1/")
+#         ]
 
+dirs = [("100-diversity", "/home/ahmadh19/Results/enforced-diverse-pop/string-lengths-backwards/")]
 
 outputFilePrefix = "log"
 outputFileSuffix = ".txt"
