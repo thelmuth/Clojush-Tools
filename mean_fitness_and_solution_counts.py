@@ -574,7 +574,7 @@ from sys import maxint
 ########################### Parent Selection Experiments v2 ##############################
 ##########################################################################################
 
-outputDirectory = "/home/thelmuth/Results/parent-selection-v2/lexicase/replace-space-with-newline/"
+#outputDirectory = "/home/thelmuth/Results/parent-selection-v2/lexicase/replace-space-with-newline/"
 #outputDirectory = "/home/thelmuth/Results/parent-selection-v2/lexicase/syllables/"
 #outputDirectory = "/home/thelmuth/Results/parent-selection-v2/lexicase/double-letters/"
 #outputDirectory = "/home/thelmuth/Results/parent-selection-v2/lexicase/string-lengths-backwards/"
@@ -607,6 +607,7 @@ outputDirectory = "/home/thelmuth/Results/parent-selection-v2/lexicase/replace-s
 #outputDirectory = "/home/thelmuth/Results/parent-selection-v2/lexicase-3000-gens/string-differences/"
 
 # TMH
+
 #######################################################################################
 #### Divide and Conquer Lexicase
 #######################################################################################
@@ -704,6 +705,15 @@ outputDirectory = "/home/thelmuth/Results/parent-selection-v2/lexicase/replace-s
 #outputDirectory = "Results/epsilon-lexicase/super-dynamic/x-word-lines/"
 #outputDirectory = "Results/epsilon-lexicase/super-dynamic/count-odds/"
 #outputDirectory = "Results/epsilon-lexicase/super-dynamic/replace-space-with-newline/"
+
+#######################################################################################
+#### Novelty Search
+#######################################################################################
+
+#outputDirectory = "Results/parent-selection-v2/novelty-search/hamming/replace-space-with-newline/"
+
+outputDirectory = "Results/decay-add-delete/add-delete-only/replace-space-with-newline/"
+
 
 outputFilePrefix = "log"
 outputFileSuffix = ".txt"

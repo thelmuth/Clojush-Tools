@@ -76,7 +76,48 @@ from sys import maxint
 #         ("Div15-Run1-tournament", "Results/GECCO16/diversity-recovery/storing-populations/tourney-div-15/double-letters/continuations/tournament/run1/")
 #         ]
 
-dirs = [("100-diversity", "/home/ahmadh19/Results/enforced-diverse-pop/string-lengths-backwards/")]
+
+############ For GPTP 17 - Sarah Troise's weighted lexicase paper
+
+# dirs = [("Number-of-Zeros", "/home/stroise/results/weighted-lexicase/number-of-zeros/replace-space-with-newline/"),
+#         ("Number-of-Nonzeros-Inverse", "/home/stroise/results/weighted-lexicase/number-of-nonzero-inverse/replace-space-with-newline/"),
+#         ("Median-Inverse", "/home/thelmuth/Results/weighted-lexicase/weighted-lexicase/median-inverse/replace-space-with-newline/"),
+#         ("Number-of-Zeros-Inverse", "/home/stroise/results/weighted-lexicase/number-of-zeros-inverse/replace-space-with-newline/"),
+#         ("Number-of-Nonzeros", "/home/stroise/results/weighted-lexicase/number-of-nonzero/replace-space-with-newline/"),
+#         ("Median", "/home/stroise/results/weighted-lexicase/median/replace-space-with-newline/"),
+#         ("Average", "/home/thelmuth/Results/weighted-lexicase/weighted-lexicase/average/replace-space-with-newline/"),
+#         ("Variance", "/home/stroise/results/weighted-lexicase/variance/replace-space-with-newline/"),
+#         ("Variance-Inverse", "/home/thelmuth/Results/weighted-lexicase/weighted-lexicase/variance-inverse/replace-space-with-newline/")
+#        ]
+
+# dirs = [("Number-of-Zeros", "/home/thelmuth/Results/weighted-lexicase/ranked-lexicase/number-of-zeros/replace-space-with-newline/"),
+#         ("Number-of-Nonzeros-Inverse", "/home/thelmuth/Results/weighted-lexicase/ranked-lexicase/number-of-nonzero-inverse/replace-space-with-newline/"),
+#         ("Median-Inverse", "/home/thelmuth/Results/weighted-lexicase/ranked-lexicase/median-inverse/replace-space-with-newline/"),
+#         ("Number-of-Zeros-Inverse", "/home/thelmuth/Results/weighted-lexicase/ranked-lexicase/number-of-zeros-inverse/replace-space-with-newline/"),
+#         ("Number-of-Nonzeros", "/home/thelmuth/Results/weighted-lexicase/ranked-lexicase/number-of-nonzero/replace-space-with-newline/"),
+#         ("Median", "/home/thelmuth/Results/weighted-lexicase/ranked-lexicase/median/replace-space-with-newline/"),
+#         ("Average", "/home/thelmuth/Results/weighted-lexicase/ranked-lexicase/average/replace-space-with-newline/"),
+#         ("Variance", "/home/thelmuth/Results/weighted-lexicase/ranked-lexicase/variance/replace-space-with-newline/"),
+#         ("Variance-Inverse", "/home/thelmuth/Results/weighted-lexicase/ranked-lexicase/variance-inverse/replace-space-with-newline/")
+#         ]
+
+# dirs = [("Regular-Lexicase", "/home/thelmuth/Results/parent-selection-v2/lexicase/replace-space-with-newline"),
+#         ("Number-of-Zeros", "/home/thelmuth/Results/weighted-lexicase/bias-lexicase/number-of-zeros/replace-space-with-newline/"),
+#         ("Number-of-Nonzeros-Inverse", "/home/thelmuth/Results/weighted-lexicase/bias-lexicase/number-of-nonzero-inverse/replace-space-with-newline/"),
+#         ("Median-Inverse", "/home/thelmuth/Results/weighted-lexicase/bias-lexicase/median-inverse/replace-space-with-newline/"),
+#         ("Number-of-Zeros-Inverse", "/home/thelmuth/Results/weighted-lexicase/bias-lexicase/number-of-zeros-inverse/replace-space-with-newline/"),
+#         ("Number-of-Nonzeros", "/home/thelmuth/Results/weighted-lexicase/bias-lexicase/number-of-nonzero/replace-space-with-newline/"),
+#         ("Median", "/home/thelmuth/Results/weighted-lexicase/bias-lexicase/median/replace-space-with-newline/"),
+#         ("Average", "/home/thelmuth/Results/weighted-lexicase/bias-lexicase/average/replace-space-with-newline/"),
+#         ("Variance", "/home/thelmuth/Results/weighted-lexicase/bias-lexicase/variance/replace-space-with-newline/"),
+#         ("Variance-Inverse", "/home/thelmuth/Results/weighted-lexicase/bias-lexicase/variance-inverse/replace-space-with-newline/")
+#         ]
+
+dirs = [("Regular-Lexicase", "/home/thelmuth/Results/parent-selection-v2/lexicase/replace-space-with-newline")]
+
+
+
+
 
 outputFilePrefix = "log"
 outputFileSuffix = ".txt"
