@@ -70,6 +70,18 @@ dirs = [("Replace Space With Newline", "Results/bench-prog-synth/replace-space-w
 #         ("PlushNoops", dir4, prefix1),
 #         ("PlushNoAlignDev", dir3, prefix1)]
 
+## For Lia's honor's thesis
+
+dirs = [("RSWN", "/home/thelmuth/Results/parent-selection-v2/lexicase/replace-space-with-newline/"),
+        ("Syllables", "/home/thelmuth/Results/parent-selection-v2/lexicase/syllables/"),
+        ("Vector Average", "/home/thelmuth/Results/parent-selection-v2/lexicase/vector-average/"),
+        ("Double Letters", "/home/thelmuth/Results/parent-selection-v2/lexicase/double-letters/"),
+        ("Mirror Image", "/home/thelmuth/Results/parent-selection-v2/lexicase/mirror-image/"),
+        ("Last Index of Zero", "/home/thelmuth/Results/parent-selection-v2/lexicase/last-index-of-zero/"),
+        ("Scrabble Score", "/home/thelmuth/Results/parent-selection-v2/lexicase/scrabble-score/")
+        ]
+
+
 outputFileSuffix = ".txt"
 
 def my_mean(list_of_nums):

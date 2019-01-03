@@ -4,17 +4,63 @@ from sys import maxint
 
 # Set these before running:
 
-###### :max-points reruns
+verbose = True
+if (len(sys.argv) >= 2 and sys.argv[1] == "brief") or \
+        (len(sys.argv) >= 3 and sys.argv[2] == "brief"):
+    verbose = False
 
-#outputDirectory = "/home/thelmuth/Results/parent-selection-v2/lexicase/compare-string-lengths/"
-#outputDirectory = "/home/thelmuth/Results/parent-selection-v2/lexicase/smallest/"
-#outputDirectory = "/home/thelmuth/Results/parent-selection-v2/lexicase/for-loop-index/"
-#outputDirectory = "/home/thelmuth/Results/parent-selection-v2/lexicase/count-odds/"
-#outputDirectory = "/home/thelmuth/Results/parent-selection-v2/lexicase/checksum/"
-#outputDirectory = "/home/thelmuth/Results/parent-selection-v2/lexicase/even-squares/"
-#outputDirectory = "/home/thelmuth/Results/parent-selection-v2/lexicase/double-letters/"
-#outputDirectory = "/home/thelmuth/Results/parent-selection-v2/lexicase/collatz-numbers/"
+##########################################################################################
+########################### Parent Selection Experiments v2 ##############################
+##########################################################################################
+
 #outputDirectory = "/home/thelmuth/Results/parent-selection-v2/lexicase/replace-space-with-newline/"
+#outputDirectory = "/home/thelmuth/Results/parent-selection-v2/lexicase/syllables/"
+#outputDirectory = "/home/thelmuth/Results/parent-selection-v2/lexicase/double-letters/"
+#outputDirectory = "/home/thelmuth/Results/parent-selection-v2/lexicase/string-lengths-backwards/"
+#outputDirectory = "/home/thelmuth/Results/parent-selection-v2/lexicase/x-word-lines/"
+#outputDirectory = "/home/thelmuth/Results/parent-selection-v2/lexicase/number-io/"
+#outputDirectory = "/home/thelmuth/Results/parent-selection-v2/lexicase/small-or-large/"
+#outputDirectory = "/home/thelmuth/Results/parent-selection-v2/lexicase/for-loop-index/"
+#outputDirectory = "/home/thelmuth/Results/parent-selection-v2/lexicase/compare-string-lengths/"
+#outputDirectory = "/home/thelmuth/Results/parent-selection-v2/lexicase/collatz-numbers/"
+#outputDirectory = "/home/thelmuth/Results/parent-selection-v2/lexicase/string-differences/"
+#outputDirectory = "/home/thelmuth/Results/parent-selection-v2/lexicase/even-squares/"
+#outputDirectory = "/home/thelmuth/Results/parent-selection-v2/lexicase/wallis-pi/"
+#outputDirectory = "/home/thelmuth/Results/parent-selection-v2/lexicase/last-index-of-zero/"
+#outputDirectory = "/home/thelmuth/Results/parent-selection-v2/lexicase/vector-average/"
+#outputDirectory = "/home/thelmuth/Results/parent-selection-v2/lexicase/count-odds/"
+#outputDirectory = "/home/thelmuth/Results/parent-selection-v2/lexicase/mirror-image/"
+#outputDirectory = "/home/thelmuth/Results/parent-selection-v2/lexicase/super-anagrams/"
+#outputDirectory = "/home/thelmuth/Results/parent-selection-v2/lexicase/sum-of-squares/"
+#outputDirectory = "/home/thelmuth/Results/parent-selection-v2/lexicase/negative-to-zero/"
+#outputDirectory = "/home/thelmuth/Results/parent-selection-v2/lexicase/vectors-summed/"
+#outputDirectory = "/home/thelmuth/Results/parent-selection-v2/lexicase/median/"
+#outputDirectory = "/home/thelmuth/Results/parent-selection-v2/lexicase/smallest/"
+#outputDirectory = "/home/thelmuth/Results/parent-selection-v2/lexicase/digits/"
+#outputDirectory = "/home/thelmuth/Results/parent-selection-v2/lexicase/pig-latin/"
+#outputDirectory = "/home/thelmuth/Results/parent-selection-v2/lexicase/scrabble-score/"
+#outputDirectory = "/home/thelmuth/Results/parent-selection-v2/lexicase/word-stats/"
+#outputDirectory = "/home/thelmuth/Results/parent-selection-v2/lexicase/grade/"
+#outputDirectory = "/home/thelmuth/Results/parent-selection-v2/lexicase/checksum/"
+
+#outputDirectory = "/home/thelmuth/Results/parent-selection-v2/lexicase-3000-gens/string-differences/"
+
+#outputDirectory = "/home/thelmuth/Results/parent-selection-v2/tournament/replace-space-with-newline/"
+#outputDirectory = "/home/thelmuth/Results/parent-selection-v2/tournament/syllables/"
+#outputDirectory = "/home/thelmuth/Results/parent-selection-v2/tournament/vector-average/"
+#outputDirectory = "/home/thelmuth/Results/parent-selection-v2/tournament/mirror-image/"
+#outputDirectory = "/home/thelmuth/Results/parent-selection-v2/tournament/number-io/"
+#outputDirectory = "/home/thelmuth/Results/parent-selection-v2/tournament/smallest/"
+#outputDirectory = "/home/thelmuth/Results/parent-selection-v2/tournament/last-index-of-zero/"
+#outputDirectory = "/home/thelmuth/Results/parent-selection-v2/tournament/double-letters/"
+#outputDirectory = "/home/thelmuth/Results/parent-selection-v2/tournament/compare-string-lengths/"
+#outputDirectory = "/home/thelmuth/Results/parent-selection-v2/tournament/scrabble-score/"
+#outputDirectory = "/home/thelmuth/Results/parent-selection-v2/tournament/x-word-lines/"
+#outputDirectory = "/home/thelmuth/Results/parent-selection-v2/tournament/negative-to-zero/"
+#outputDirectory = "/home/thelmuth/Results/parent-selection-v2/tournament/count-odds/"
+#outputDirectory = "/home/thelmuth/Results/parent-selection-v2/tournament/sum-of-squares/"
+
+
 
 #######################################################################################
 #### Sarah Troise's Runs: Weighted Lexicase Selection
@@ -101,42 +147,6 @@ from sys import maxint
 #outputDirectory = "/home/thelmuth/Results/weighted-lexicase/bias-lexicase/variance-inverse/syllables/"
 #outputDirectory = "/home/thelmuth/Results/weighted-lexicase/bias-lexicase/average/syllables/"
 
-
-##########################################################################################
-########################### Parent Selection Experiments v2 ##############################
-##########################################################################################
-
-#outputDirectory = "/home/thelmuth/Results/parent-selection-v2/lexicase/replace-space-with-newline/"
-#outputDirectory = "/home/thelmuth/Results/parent-selection-v2/lexicase/syllables/"
-#outputDirectory = "/home/thelmuth/Results/parent-selection-v2/lexicase/double-letters/"
-#outputDirectory = "/home/thelmuth/Results/parent-selection-v2/lexicase/string-lengths-backwards/"
-#outputDirectory = "/home/thelmuth/Results/parent-selection-v2/lexicase/x-word-lines/"
-#outputDirectory = "/home/thelmuth/Results/parent-selection-v2/lexicase/number-io/"
-#outputDirectory = "/home/thelmuth/Results/parent-selection-v2/lexicase/small-or-large/"
-#outputDirectory = "/home/thelmuth/Results/parent-selection-v2/lexicase/for-loop-index/"
-#outputDirectory = "/home/thelmuth/Results/parent-selection-v2/lexicase/compare-string-lengths/"
-#outputDirectory = "/home/thelmuth/Results/parent-selection-v2/lexicase/collatz-numbers/"
-#outputDirectory = "/home/thelmuth/Results/parent-selection-v2/lexicase/string-differences/"
-#outputDirectory = "/home/thelmuth/Results/parent-selection-v2/lexicase/even-squares/"
-#outputDirectory = "/home/thelmuth/Results/parent-selection-v2/lexicase/wallis-pi/"
-#outputDirectory = "/home/thelmuth/Results/parent-selection-v2/lexicase/last-index-of-zero/"
-#outputDirectory = "/home/thelmuth/Results/parent-selection-v2/lexicase/vector-average/"
-#outputDirectory = "/home/thelmuth/Results/parent-selection-v2/lexicase/count-odds/"
-#outputDirectory = "/home/thelmuth/Results/parent-selection-v2/lexicase/mirror-image/"
-#outputDirectory = "/home/thelmuth/Results/parent-selection-v2/lexicase/super-anagrams/"
-#outputDirectory = "/home/thelmuth/Results/parent-selection-v2/lexicase/sum-of-squares/"
-#outputDirectory = "/home/thelmuth/Results/parent-selection-v2/lexicase/negative-to-zero/"
-#outputDirectory = "/home/thelmuth/Results/parent-selection-v2/lexicase/vectors-summed/"
-#outputDirectory = "/home/thelmuth/Results/parent-selection-v2/lexicase/median/"
-#outputDirectory = "/home/thelmuth/Results/parent-selection-v2/lexicase/smallest/"
-#outputDirectory = "/home/thelmuth/Results/parent-selection-v2/lexicase/digits/"
-#outputDirectory = "/home/thelmuth/Results/parent-selection-v2/lexicase/pig-latin/"
-#outputDirectory = "/home/thelmuth/Results/parent-selection-v2/lexicase/scrabble-score/"
-#outputDirectory = "/home/thelmuth/Results/parent-selection-v2/lexicase/word-stats/"
-#outputDirectory = "/home/thelmuth/Results/parent-selection-v2/lexicase/grade/"
-#outputDirectory = "/home/thelmuth/Results/parent-selection-v2/lexicase/checksum/"
-
-#outputDirectory = "/home/thelmuth/Results/parent-selection-v2/lexicase-3000-gens/string-differences/"
 
 #######################################################################################
 #### Divide and Conquer Lexicase
@@ -318,7 +328,7 @@ from sys import maxint
 ################
 
 ### Add Delete Only
-outputDirectory = "Results/decay-add-delete/add-delete-only/replace-space-with-newline/"
+#outputDirectory = "Results/decay-add-delete/add-delete-only/replace-space-with-newline/"
 #outputDirectory = "Results/decay-add-delete/add-delete-only/syllables/"
 #outputDirectory = "Results/decay-add-delete/add-delete-only/count-odds/"
 #outputDirectory = "Results/decay-add-delete/add-delete-only/x-word-lines/"
@@ -394,12 +404,68 @@ outputDirectory = "Results/decay-add-delete/add-delete-only/replace-space-with-n
 #outputDirectory = "Results/decay-add-delete/size-neutral-add-delete/replace-space-with-newline/"
 #outputDirectory = "Results/decay-add-delete/size-neutral-add-delete/syllables/"
 #outputDirectory = "Results/decay-add-delete/size-neutral-add-delete/vector-average/"
+#outputDirectory = "Results/decay-add-delete/size-neutral-add-delete/compare-string-lengths/"
+#outputDirectory = "Results/decay-add-delete/size-neutral-add-delete/last-index-of-zero/"
+#outputDirectory = "Results/decay-add-delete/size-neutral-add-delete/mirror-image/"
+#outputDirectory = "Results/decay-add-delete/size-neutral-add-delete/double-letters/"
+#outputDirectory = "Results/decay-add-delete/size-neutral-add-delete/x-word-lines/"
+#outputDirectory = "Results/decay-add-delete/size-neutral-add-delete/sum-of-squares/"
+#outputDirectory = "Results/decay-add-delete/size-neutral-add-delete/negative-to-zero/"
+#outputDirectory = "Results/decay-add-delete/size-neutral-add-delete/scrabble-score/"
+#outputDirectory = "Results/decay-add-delete/size-neutral-add-delete/checksum/"
+#outputDirectory = "Results/decay-add-delete/size-neutral-add-delete/string-lengths-backwards/"
+#outputDirectory = "Results/decay-add-delete/size-neutral-add-delete/vectors-summed/"
+#outputDirectory = "Results/decay-add-delete/size-neutral-add-delete/count-odds/"
+#outputDirectory = "Results/decay-add-delete/size-neutral-add-delete/median/"
+#outputDirectory = "Results/decay-add-delete/size-neutral-add-delete/digits/"
+#outputDirectory = "Results/decay-add-delete/size-neutral-add-delete/grade/"
+#outputDirectory = "Results/decay-add-delete/size-neutral-add-delete/number-io/"
+#outputDirectory = "Results/decay-add-delete/size-neutral-add-delete/small-or-large/"
+#outputDirectory = "Results/decay-add-delete/size-neutral-add-delete/for-loop-index/"
+#outputDirectory = "Results/decay-add-delete/size-neutral-add-delete/even-squares/"
+#outputDirectory = "Results/decay-add-delete/size-neutral-add-delete/super-anagrams/"
+#outputDirectory = "Results/decay-add-delete/size-neutral-add-delete/pig-latin/"
+#outputDirectory = "Results/decay-add-delete/size-neutral-add-delete/smallest/"
+
+### Size-Growing Add+Delete
+#outputDirectory = "Results/decay-add-delete/size-growing-add-delete/replace-space-with-newline/"
+#outputDirectory = "Results/decay-add-delete/size-growing-add-delete/syllables/"
+#outputDirectory = "Results/decay-add-delete/size-growing-add-delete/vector-average/"
+#outputDirectory = "Results/decay-add-delete/size-growing-add-delete/compare-string-lengths/"
+#outputDirectory = "Results/decay-add-delete/size-growing-add-delete/last-index-of-zero/"
+#outputDirectory = "Results/decay-add-delete/size-growing-add-delete/mirror-image/"
+#outputDirectory = "Results/decay-add-delete/size-growing-add-delete/double-letters/"
+#outputDirectory = "Results/decay-add-delete/size-growing-add-delete/x-word-lines/"
+#outputDirectory = "Results/decay-add-delete/size-growing-add-delete/negative-to-zero/"
+#outputDirectory = "Results/decay-add-delete/size-growing-add-delete/checksum/"
+#outputDirectory = "Results/decay-add-delete/size-growing-add-delete/compare-string-lengths/"
+#outputDirectory = "Results/decay-add-delete/size-growing-add-delete/count-odds/"
+#outputDirectory = "Results/decay-add-delete/size-growing-add-delete/digits/"
+#outputDirectory = "Results/decay-add-delete/size-growing-add-delete/grade/"
+#outputDirectory = "Results/decay-add-delete/size-growing-add-delete/median/"
+#outputDirectory = "Results/decay-add-delete/size-growing-add-delete/scrabble-score/"
+#outputDirectory = "Results/decay-add-delete/size-growing-add-delete/string-lengths-backwards/"
+#outputDirectory = "Results/decay-add-delete/size-growing-add-delete/sum-of-squares/"
+#outputDirectory = "Results/decay-add-delete/size-growing-add-delete/vectors-summed/"
+#outputDirectory = "Results/decay-add-delete/size-growing-add-delete/number-io/"
+#outputDirectory = "Results/decay-add-delete/size-growing-add-delete/small-or-large/"
+#outputDirectory = "Results/decay-add-delete/size-growing-add-delete/for-loop-index/"
+#outputDirectory = "Results/decay-add-delete/size-growing-add-delete/even-squares/"
+#outputDirectory = "Results/decay-add-delete/size-growing-add-delete/super-anagrams/"
+#outputDirectory = "Results/decay-add-delete/size-growing-add-delete/pig-latin/"
+#outputDirectory = "Results/decay-add-delete/size-growing-add-delete/smallest/"
+
 
 
 ### 50-50 Add+Delete and Alternation
 #outputDirectory = "Results/decay-add-delete/add-delete-alternation-50-50/replace-space-with-newline/"
 #outputDirectory = "Results/decay-add-delete/add-delete-alternation-50-50/syllables/"
 #outputDirectory = "Results/decay-add-delete/add-delete-alternation-50-50/vector-average/"
+
+### 50-50 Add+Delete and Alternation (size-neutral)
+#outputDirectory = "Results/decay-add-delete/size-neutral-add-delete-alternation-50-50/replace-space-with-newline/"
+#outputDirectory = "Results/decay-add-delete/size-neutral-add-delete-alternation-50-50/syllables/"
+#outputDirectory = "Results/decay-add-delete/size-neutral-add-delete-alternation-50-50/vector-average/"
 
 
 ### Half Addition, Half Deletion
@@ -413,9 +479,26 @@ outputDirectory = "Results/decay-add-delete/add-delete-only/replace-space-with-n
 #outputDirectory = "Results/decay-add-delete/half-add-half-delete/negative-to-zero/"
 #outputDirectory = "Results/decay-add-delete/half-add-half-delete/scrabble-score/"
 #outputDirectory = "Results/decay-add-delete/half-add-half-delete/count-odds/"
+#outputDirectory = "Results/decay-add-delete/half-add-half-delete/mirror-image"
+#outputDirectory = "Results/decay-add-delete/half-add-half-delete/checksum/"
+#outputDirectory = "Results/decay-add-delete/half-add-half-delete/compare-string-lengths/"
+#outputDirectory = "Results/decay-add-delete/half-add-half-delete/count-odds/"
+#outputDirectory = "Results/decay-add-delete/half-add-half-delete/digits/"
+#outputDirectory = "Results/decay-add-delete/half-add-half-delete/grade/"
+#outputDirectory = "Results/decay-add-delete/half-add-half-delete/median/"
+#outputDirectory = "Results/decay-add-delete/half-add-half-delete/string-lengths-backwards/"
+#outputDirectory = "Results/decay-add-delete/half-add-half-delete/vectors-summed/"
+#outputDirectory = "Results/decay-add-delete/half-add-half-delete/number-io/"
+#outputDirectory = "Results/decay-add-delete/half-add-half-delete/small-or-large/"
+#outputDirectory = "Results/decay-add-delete/half-add-half-delete/for-loop-index/"
+#outputDirectory = "Results/decay-add-delete/half-add-half-delete/even-squares/"
+#outputDirectory = "Results/decay-add-delete/half-add-half-delete/super-anagrams/"
+#outputDirectory = "Results/decay-add-delete/half-add-half-delete/pig-latin/"
+#outputDirectory = "Results/decay-add-delete/half-add-half-delete/smallest/"
 
 
-### Smaller and larger Populations
+
+### Smaller and larger Populations (size shrinking add-delete)
 #outputDirectory = "Results/decay-add-delete/pop-size-100/add-delete-only/replace-space-with-newline/"
 #outputDirectory = "Results/decay-add-delete/pop-size-100/add-delete-only/syllables/"
 #outputDirectory = "Results/decay-add-delete/pop-size-100/add-delete-only/vector-average/"
@@ -428,6 +511,20 @@ outputDirectory = "Results/decay-add-delete/add-delete-only/replace-space-with-n
 #outputDirectory = "Results/decay-add-delete/pop-size-10000/add-delete-only/syllables/"
 #outputDirectory = "Results/decay-add-delete/pop-size-10000/add-delete-only/vector-average/"
 
+### Smaller and larger Populations (size-neutral add-delete)
+#outputDirectory = "Results/decay-add-delete/pop-size-100/size-neutral-add-delete/replace-space-with-newline/"
+#outputDirectory = "Results/decay-add-delete/pop-size-100/size-neutral-add-delete/syllables/"
+#outputDirectory = "Results/decay-add-delete/pop-size-100/size-neutral-add-delete/vector-average/"
+
+#outputDirectory = "Results/decay-add-delete/pop-size-10/size-neutral-add-delete/replace-space-with-newline/"
+#outputDirectory = "Results/decay-add-delete/pop-size-10/size-neutral-add-delete/syllables/"
+#outputDirectory = "Results/decay-add-delete/pop-size-10/size-neutral-add-delete/vector-average/"
+
+#outputDirectory = "Results/decay-add-delete/pop-size-10000/size-neutral-add-delete/replace-space-with-newline/"
+#outputDirectory = "Results/decay-add-delete/pop-size-10000/size-neutral-add-delete/syllables/"
+#outputDirectory = "Results/decay-add-delete/pop-size-10000/size-neutral-add-delete/vector-average/"
+
+
 ### Add Delete Only with different rates
 #outputDirectory = "Results/decay-add-delete/add-delete-rate-018/replace-space-with-newline/"
 #outputDirectory = "Results/decay-add-delete/add-delete-rate-018/syllables/"
@@ -436,6 +533,42 @@ outputDirectory = "Results/decay-add-delete/add-delete-only/replace-space-with-n
 #outputDirectory = "Results/decay-add-delete/add-delete-rate-0045/replace-space-with-newline/"
 #outputDirectory = "Results/decay-add-delete/add-delete-rate-0045/syllables/"
 #outputDirectory = "Results/decay-add-delete/add-delete-rate-0045/vector-average/"
+
+
+### Size-Neutral Add Delete Only with different rates
+#outputDirectory = "Results/decay-add-delete/size-neutral-add-delete-rate-018/replace-space-with-newline/"
+#outputDirectory = "Results/decay-add-delete/size-neutral-add-delete-rate-018/syllables/"
+#outputDirectory = "Results/decay-add-delete/size-neutral-add-delete-rate-018/vector-average/"
+#outputDirectory = "Results/decay-add-delete/size-neutral-add-delete-rate-018/mirror-image/"
+#outputDirectory = "Results/decay-add-delete/size-neutral-add-delete-rate-018/double-letters/"
+#outputDirectory = "Results/decay-add-delete/size-neutral-add-delete-rate-018/x-word-lines/"
+#outputDirectory = "Results/decay-add-delete/size-neutral-add-delete-rate-018/sum-of-squares/"
+
+#outputDirectory = "Results/decay-add-delete/size-neutral-add-delete-rate-0045/replace-space-with-newline/"
+#outputDirectory = "Results/decay-add-delete/size-neutral-add-delete-rate-0045/syllables/"
+#outputDirectory = "Results/decay-add-delete/size-neutral-add-delete-rate-0045/vector-average/"
+#outputDirectory = "Results/decay-add-delete/size-neutral-add-delete-rate-0045/mirror-image/"
+#outputDirectory = "Results/decay-add-delete/size-neutral-add-delete-rate-0045/double-letters/"
+#outputDirectory = "Results/decay-add-delete/size-neutral-add-delete-rate-0045/x-word-lines/"
+#outputDirectory = "Results/decay-add-delete/size-neutral-add-delete-rate-0045/sum-of-squares/"
+
+
+#######
+### Uniform Combination and Deletion
+######
+
+#outputDirectory = "/home/thelmuth/Results/decay-add-delete/uniform-combination-and-deletion-1/replace-space-with-newline/"
+#outputDirectory = "/home/thelmuth/Results/decay-add-delete/uniform-combination-and-deletion-1/syllables/"
+#outputDirectory = "/home/thelmuth/Results/decay-add-delete/uniform-combination-and-deletion-1/vector-average/"
+
+#outputDirectory = "/home/thelmuth/Results/decay-add-delete/uniform-combination-and-deletion-009/replace-space-with-newline/"
+#outputDirectory = "/home/thelmuth/Results/decay-add-delete/uniform-combination-and-deletion-009/syllables/"
+#outputDirectory = "/home/thelmuth/Results/decay-add-delete/uniform-combination-and-deletion-009/vector-average/"
+
+#outputDirectory = "/home/thelmuth/Results/decay-add-delete/uniform-combination-009-followed-by-deletion-01/replace-space-with-newline/"
+#outputDirectory = "/home/thelmuth/Results/decay-add-delete/uniform-combination-009-followed-by-deletion-01/syllables/"
+#outputDirectory = "/home/thelmuth/Results/decay-add-delete/uniform-combination-009-followed-by-deletion-01/vector-average/"
+
 
 
 
@@ -457,6 +590,31 @@ outputDirectory = "Results/decay-add-delete/add-delete-only/replace-space-with-n
 #outputDirectory = "Results/parent-selection-v2/mutation-only-rate-09/compare-string-lengths/"
 #outputDirectory = "Results/parent-selection-v2/mutation-only-rate-09/vectors-summed/"
 #outputDirectory = "Results/parent-selection-v2/mutation-only-rate-09/negative-to-zero/"
+#outputDirectory = "Results/parent-selection-v2/mutation-only-rate-09/string-lengths-backwards/"
+#outputDirectory = "Results/parent-selection-v2/mutation-only-rate-09/checksum/"
+#outputDirectory = "Results/parent-selection-v2/mutation-only-rate-09/digits/"
+#outputDirectory = "Results/parent-selection-v2/mutation-only-rate-09/median/"
+#outputDirectory = "Results/parent-selection-v2/mutation-only-rate-09/grade/"
+#outputDirectory = "Results/parent-selection-v2/mutation-only-rate-09/number-io/"
+#outputDirectory = "Results/parent-selection-v2/mutation-only-rate-09/small-or-large/"
+#outputDirectory = "Results/parent-selection-v2/mutation-only-rate-09/for-loop-index/"
+#outputDirectory = "Results/parent-selection-v2/mutation-only-rate-09/even-squares/"
+#outputDirectory = "Results/parent-selection-v2/mutation-only-rate-09/super-anagrams/"
+#outputDirectory = "Results/parent-selection-v2/mutation-only-rate-09/pig-latin/"
+#outputDirectory = "Results/parent-selection-v2/mutation-only-rate-09/smallest/"
+
+
+
+############################
+### Tournament Selection
+### Size-Neutral Add+Delete
+############################
+
+#outputDirectory = "Results/decay-add-delete/tournament/size-neutral-add-delete/number-io/"
+#outputDirectory = "Results/decay-add-delete/tournament/size-neutral-add-delete/smallest/"
+#outputDirectory = "Results/decay-add-delete/tournament/size-neutral-add-delete/mirror-image/"
+
+
 
 
 ####################################################################################################
@@ -470,6 +628,93 @@ outputDirectory = "Results/decay-add-delete/add-delete-only/replace-space-with-n
 #outputDirectory = "Results/sampled-lexicase-tournament/semantic-SLT-by-samples/negative-to-zero/"
 #outputDirectory = "Results/sampled-lexicase-tournament/semantic-SLT-by-samples/x-word-lines/"
 #outputDirectory = "Results/sampled-lexicase-tournament/semantic-SLT-by-samples/string-lengths-backwards/"
+
+############
+### Alex Dennis's honors thesis experiments on DOF epsilon lexicase
+############
+
+#outputDirectory = "Results/DOF-lexicase/x-word-lines/"
+#outputDirectory = "Results/DOF-lexicase/double-letters/"
+#outputDirectory = "Results/DOF-lexicase/small-or-large/"
+#outputDirectory = "Results/DOF-lexicase/digits/"
+#outputDirectory = "Results/DOF-lexicase/for-loop-index/"
+
+
+########################################################################################
+##### Elitist Survival Selection - specialists for lexicase
+########################################################################################
+
+#outputDirectory = "Results/elitist-survival-2018/rate-50/lexicase/replace-space-with-newline/"
+#outputDirectory = "Results/elitist-survival-2018/rate-50/lexicase/syllables/"
+#outputDirectory = "Results/elitist-survival-2018/rate-50/lexicase/string-lengths-backwards/"
+#outputDirectory = "Results/elitist-survival-2018/rate-50/lexicase/mirror-image/"
+#outputDirectory = "Results/elitist-survival-2018/rate-50/lexicase/last-index-of-zero/"
+#outputDirectory = "Results/elitist-survival-2018/rate-50/lexicase/negative-to-zero/"
+#outputDirectory = "Results/elitist-survival-2018/rate-50/lexicase/double-letters/"
+#outputDirectory = "Results/elitist-survival-2018/rate-50/lexicase/vector-average/"
+#outputDirectory = "Results/elitist-survival-2018/rate-50/lexicase/compare-string-lengths/"
+#outputDirectory = "Results/elitist-survival-2018/rate-50/lexicase/sum-of-squares/"
+#outputDirectory = "Results/elitist-survival-2018/rate-50/lexicase/x-word-lines/"
+#outputDirectory = "Results/elitist-survival-2018/rate-50/lexicase//"
+
+#outputDirectory = "Results/elitist-survival-2018/rate-20/lexicase/replace-space-with-newline/"
+#outputDirectory = "Results/elitist-survival-2018/rate-20/lexicase/syllables/"
+#outputDirectory = "Results/elitist-survival-2018/rate-20/lexicase/string-lengths-backwards/"
+#outputDirectory = "Results/elitist-survival-2018/rate-20/lexicase/mirror-image/"
+#outputDirectory = "Results/elitist-survival-2018/rate-20/lexicase/last-index-of-zero/"
+#outputDirectory = "Results/elitist-survival-2018/rate-20/lexicase/negative-to-zero/"
+#outputDirectory = "Results/elitist-survival-2018/rate-20/lexicase/double-letters/"
+#outputDirectory = "Results/elitist-survival-2018/rate-20/lexicase/vector-average/"
+#outputDirectory = "Results/elitist-survival-2018/rate-20/lexicase/compare-string-lengths/"
+#outputDirectory = "Results/elitist-survival-2018/rate-20/lexicase/sum-of-squares/"
+#outputDirectory = "Results/elitist-survival-2018/rate-20/lexicase/x-word-lines/"
+#outputDirectory = "Results/elitist-survival-2018/rate-20/lexicase//"
+
+#outputDirectory = "Results/elitist-survival-2018/rate-10/lexicase/replace-space-with-newline/"
+#outputDirectory = "Results/elitist-survival-2018/rate-10/lexicase/syllables/"
+#outputDirectory = "Results/elitist-survival-2018/rate-10/lexicase/string-lengths-backwards/"
+#outputDirectory = "Results/elitist-survival-2018/rate-10/lexicase/mirror-image/"
+#outputDirectory = "Results/elitist-survival-2018/rate-10/lexicase/last-index-of-zero/"
+#outputDirectory = "Results/elitist-survival-2018/rate-10/lexicase/negative-to-zero/"
+#outputDirectory = "Results/elitist-survival-2018/rate-10/lexicase/double-letters/"
+#outputDirectory = "Results/elitist-survival-2018/rate-10/lexicase/vector-average/"
+#outputDirectory = "Results/elitist-survival-2018/rate-10/lexicase/compare-string-lengths/"
+#outputDirectory = "Results/elitist-survival-2018/rate-10/lexicase/sum-of-squares/"
+#outputDirectory = "Results/elitist-survival-2018/rate-10/lexicase/x-word-lines/"
+#outputDirectory = "Results/elitist-survival-2018/rate-10/lexicase//"
+
+########################################################################################
+##### Plushi
+########################################################################################
+
+#outputDirectory = "Results/plushi/replace-space-with-newline/"
+#outputDirectory = "Results/plushi/syllables/"
+#outputDirectory = "Results/plushi/string-lengths-backwards/"
+#outputDirectory = "Results/plushi/mirror-image/"
+#outputDirectory = "Results/plushi/last-index-of-zero/"
+#outputDirectory = "Results/plushi/negative-to-zero/"
+#outputDirectory = "Results/plushi/double-letters/"
+#outputDirectory = "Results/plushi/vector-average/"
+#outputDirectory = "Results/plushi/compare-string-lengths/"
+#outputDirectory = "Results/plushi/sum-of-squares/"
+#outputDirectory = "Results/plushi/x-word-lines/"
+#outputDirectory = "Results/plushi/wallis-pi/"
+#outputDirectory = "Results/plushi/pig-latin/"
+#outputDirectory = "Results/plushi/even-squares/"
+#outputDirectory = "Results/plushi/checksum/"
+
+
+#outputDirectory = "Results/wc-new-experiments/UMAD/wc"
+outputDirectory = "Results/wc-new-experiments/old-atom-gens/UMAD/wc"
+
+
+
+
+
+# This allows this script to take a command line argument for outputDirectory
+if len(sys.argv) > 1 and sys.argv[1] != "brief":
+    outputDirectory = sys.argv[1]
+
 
 outputFilePrefix = "log"
 outputFileSuffix = ".txt"
@@ -633,31 +878,33 @@ while (outputFilePrefix + str(i) + outputFileSuffix) in dirList:
     i += 1
 
 print
-print "Error threshold per case:", errorThresholdPerCase
-print "-------------------------------------------------"
 
-for i, (gen, fitness, done) in enumerate(bestFitnessesOfRuns):
-    doneSym = ""
-    if fitness <= errorThresholdPerCase:
-        doneSym = " <- suc"
-        if not done:
-            doneSym += "$$$$$$ ERROR $$$$$$" #Should never get here
-        if len(testFitnessOfBest) > i and testFitnessOfBest[i] < maxint:
-            if isinstance(testFitnessOfBest[i], int):
-                doneSym += " | test = %i" % testFitnessOfBest[i]
-            else:
-                doneSym += " | test = %.3f" % testFitnessOfBest[i]
-        if len(testFitnessOfSimplifiedBest) > i and testFitnessOfSimplifiedBest[i] < maxint:
-            if isinstance(testFitnessOfSimplifiedBest[i], int):
-                doneSym += " | test on simplified = %i" % testFitnessOfSimplifiedBest[i]
-            else:
-                doneSym += " | test on simplified = %.4f" % testFitnessOfSimplifiedBest[i] #TMH this line changed
-    elif not done:
-        doneSym = " -- not done"
-    if fitness >= 0.001 or fitness == 0.0:
-        print "Run: %3i  | Gen: %5i  | Best Fitness (mean) = %8.4f%s" % (i, gen, fitness, doneSym)
-    else:
-        print "Run: %3i  | Gen: %5i  | Best Fitness (mean) = %.4e%s" % (i, gen, fitness, doneSym)
+if verbose:
+    print "Error threshold per case:", errorThresholdPerCase
+    print "-------------------------------------------------"
+
+    for i, (gen, fitness, done) in enumerate(bestFitnessesOfRuns):
+        doneSym = ""
+        if fitness <= errorThresholdPerCase:
+            doneSym = " <- suc"
+            if not done:
+                doneSym += "$$$$$$ ERROR $$$$$$" #Should never get here
+            if len(testFitnessOfBest) > i and testFitnessOfBest[i] < maxint:
+                if isinstance(testFitnessOfBest[i], int):
+                    doneSym += " | test = %i" % testFitnessOfBest[i]
+                else:
+                    doneSym += " | test = %.3f" % testFitnessOfBest[i]
+            if len(testFitnessOfSimplifiedBest) > i and testFitnessOfSimplifiedBest[i] < maxint:
+                if isinstance(testFitnessOfSimplifiedBest[i], int):
+                    doneSym += " | test on simplified = %i" % testFitnessOfSimplifiedBest[i]
+                else:
+                    doneSym += " | test on simplified = %.4f" % testFitnessOfSimplifiedBest[i] #TMH this line changed
+        elif not done:
+            doneSym = " -- not done"
+        if fitness >= 0.001 or fitness == 0.0:
+            print "Run: %3i  | Gen: %5i  | Best Fitness (mean) = %8.4f%s" % (i, gen, fitness, doneSym)
+        else:
+            print "Run: %3i  | Gen: %5i  | Best Fitness (mean) = %.4e%s" % (i, gen, fitness, doneSym)
 
 totalFitness = 0
 inds = 0
@@ -682,7 +929,7 @@ for i, (gen, fitness, done) in enumerate(bestFitnessesOfRuns):
                 if testFitnessOfSimplifiedBest[i] <= errorThresholdPerCase:
                     simpPerfectOnTestSet += 1
 
-if len(trainSolutionGens) > 0:
+if verbose and len(trainSolutionGens) > 0:
     print "------------------------------------------------------------"
     print "Training Solution Generations:"
     print "Mean:      ", mean(trainSolutionGens)
@@ -697,6 +944,8 @@ if len(trainSolutionGens) > 0:
         print "Minimum:   ", min(testSolutionGens)
         print "Median:    ", median(testSolutionGens)
         print "Maximum:   ", max(testSolutionGens)
+
+        # print testSolutionGens
 
 print "------------------------------------------------------------"
 

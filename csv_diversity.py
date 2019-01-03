@@ -42,7 +42,29 @@ from sys import maxint
 # outputDirectory = "Results/GECCO16/diversity-recovery/storing-populations/tourney-div-15/replace-space-with-newline/continuations/tournament/run0/"
 
 
-dirs = [("100-diversity", "/home/ahmadh19/Results/enforced-diverse-pop/string-lengths-backwards/")]
+#dirs = [("100-diversity", "/home/ahmadh19/Results/enforced-diverse-pop/string-lengths-backwards/")]
+
+#dirs = [#("Double Letters", "/home/thelmuth/Results/parent-selection-v2/tournament/double-letters/"),
+        #("Mirror Image", "/home/thelmuth/Results/parent-selection-v2/tournament/mirror-image/"),
+        #("Last Index of Zero", "/home/thelmuth/Results/parent-selection-v2/tournament/last-index-of-zero/"),
+        #("Scrabble Score", "/home/thelmuth/Results/parent-selection-v2/tournament/scrabble-score/")
+        #]
+
+# dirs = [("Replace Space With Newline", "/home/thelmuth/Results/parent-selection-v2/novelty-search/hamming/replace-space-with-newline/"),
+#         ("Mirror Image", "/home/thelmuth/Results/parent-selection-v2/novelty-search/hamming/mirror-image/"),
+#         ("Vector Average", "/home/thelmuth/Results/parent-selection-v2/novelty-search/manhattan/vector-average/")
+#         ]
+
+dirs = [("csl", "/home/thelmuth/Results/parent-selection-v2/lexicase/compare-string-lengths/"),
+        ("median", "/home/thelmuth/Results/parent-selection-v2/lexicase/median/"),
+        ("smallest", "/home/thelmuth/Results/parent-selection-v2/lexicase/smallest/"),
+        ("super-ana", "/home/thelmuth/Results/parent-selection-v2/lexicase/super-anagrams/"),
+        ("digits", "/home/thelmuth/Results/parent-selection-v2/lexicase/digits/"),
+        ("FLI", "/home/thelmuth/Results/parent-selection-v2/lexicase/for-loop-index/"),
+        ("small-or-large", "/home/thelmuth/Results/parent-selection-v2/lexicase/small-or-large/"),
+        ("SLB", "/home/thelmuth/Results/parent-selection-v2/lexicase/string-lengths-backwards/"),
+        ("xwl", "/home/thelmuth/Results/parent-selection-v2/lexicase/x-word-lines/"),
+        ]
 
 outputFilePrefix = "log"
 outputFileSuffix = ".txt"

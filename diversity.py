@@ -4,8 +4,8 @@ from sys import maxint
 
 # Set these before running:
 
-print_bd = False
-print_errordiv = True
+print_bd = True
+print_errordiv = False
 print_ham = False
 
 #outputDirectory = "Results/bench-prog-synth/checksum/exploratory/lexicase/"
@@ -13,9 +13,23 @@ print_ham = False
 #outputDirectory = "Results/bench-prog-synth/checksum/exploratory/two-tests-better-lexicase/"
 #outputDirectory = "Results/bench-prog-synth/checksum/exploratory/while-lexicase/"
 
-#outputDirectory = "Results/bench-prog-synth/replace-space-with-newline/parent-selection/lexicase/"
+#outputDirectory = "Results/parent-selection-v2/lexicase/replace-space-with-newline/"
+#outputDirectory = "Results/parent-selection-v2/lexicase/syllables/"
+#outputDirectory = "Results/parent-selection-v2/lexicase/vector-average/"
+#outputDirectory = "Results/parent-selection-v2/lexicase/double-letters/"
+#outputDirectory = "Results/parent-selection-v2/lexicase/mirror-image/"
+#outputDirectory = "Results/parent-selection-v2/lexicase/last-index-of-zero/"
+outputDirectory = "Results/parent-selection-v2/lexicase/scrabble-score/"
+#outputDirectory = "Results/parent-selection-v2/lexicase//"
+#outputDirectory = "Results/parent-selection-v2/lexicase//"
+#outputDirectory = "Results/parent-selection-v2/lexicase//"
+#outputDirectory = "Results/parent-selection-v2/lexicase//"
 
-#outputDirectory = "Results/bench-prog-synth/vector-average/ehc-experiments/lexicase/standard/"
+
+#outputDirectory = "/home/thelmuth/Results/parent-selection-v2/tournament/replace-space-with-newline/"
+#outputDirectory = "/home/thelmuth/Results/parent-selection-v2/tournament/syllables/"
+#outputDirectory = "/home/thelmuth/Results/parent-selection-v2/tournament/vector-average/"
+
 
 
 ######## Diversity Recovery trials
