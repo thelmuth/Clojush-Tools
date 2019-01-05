@@ -1,4 +1,10 @@
 #!/usr/bin/python
+
+## Can take 0, 1, or 2 command line arguments.
+## If 0 arguments, uses variable set to outputDirectory as the location of the output files.
+## First argument is the location of the output files, and overrides a variable defined below.
+## Second argument can be "brief" in order to not output individual run success/fail, and only output aggregate statistics
+
 import os, sys
 from sys import maxint
 
