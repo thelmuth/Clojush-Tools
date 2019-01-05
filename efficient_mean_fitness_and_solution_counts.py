@@ -629,6 +629,13 @@ if (len(sys.argv) >= 2 and sys.argv[1] == "brief") or \
 #outputDirectory = "Results/sampled-lexicase-tournament/semantic-SLT-by-samples/x-word-lines/"
 #outputDirectory = "Results/sampled-lexicase-tournament/semantic-SLT-by-samples/string-lengths-backwards/"
 
+### Parent selection v2: tournament
+
+#outputDirectory = "Results/parent-selection-v2/tournament/replace-space-with-newline/"
+#outputDirectory = "Results/parent-selection-v2/tournament/syllables/"
+#outputDirectory = "Results/parent-selection-v2/tournament/vector-average/"
+
+
 ############
 ### Alex Dennis's honors thesis experiments on DOF epsilon lexicase
 ############
