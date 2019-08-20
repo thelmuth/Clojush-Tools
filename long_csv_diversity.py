@@ -113,7 +113,8 @@ from sys import maxint
 #         ("Variance-Inverse", "/home/thelmuth/Results/weighted-lexicase/bias-lexicase/variance-inverse/replace-space-with-newline/")
 #         ]
 
-dirs = [("Regular-Lexicase", "/home/thelmuth/Results/parent-selection-v2/lexicase/replace-space-with-newline")]
+dirs = [("Regular-Lexicase", "/home/thelmuth/Results/parent-selection-v2/lexicase/replace-space-with-newline"),
+        ("Tournament", "/home/thelmuth/Results/parent-selection-v2/tourney-7/replace-space-with-newline")]
 
 
 
