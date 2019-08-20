@@ -4,6 +4,7 @@
 ## If 0 arguments, uses variable set to outputDirectory as the location of the output files.
 ## First argument is the location of the output files, and overrides a variable defined below.
 ## Second argument can be "brief" in order to not output individual run success/fail, and only output aggregate statistics
+## Second argument can alternatively be "csv" in order to print one line per problem, ready to paste into a spreadsheet
 
 import os, sys
 from sys import maxint
@@ -13,6 +14,12 @@ from sys import maxint
 verbose = True
 if (len(sys.argv) >= 2 and sys.argv[1] == "brief") or \
         (len(sys.argv) >= 3 and sys.argv[2] == "brief"):
+    verbose = False
+
+csv = False
+if (len(sys.argv) >= 2 and sys.argv[1] == "csv") or \
+        (len(sys.argv) >= 3 and sys.argv[2] == "csv"):
+    csv = True
     verbose = False
 
 ##########################################################################################
@@ -725,7 +732,7 @@ outputDirectory = "Results/wc-new-experiments/old-atom-gens/UMAD/wc"
 
 
 # This allows this script to take a command line argument for outputDirectory
-if len(sys.argv) > 1 and sys.argv[1] != "brief":
+if len(sys.argv) > 1 and sys.argv[1] != "brief" and sys.argv[1] != "csv":
     outputDirectory = sys.argv[1]
 
 
@@ -790,9 +797,10 @@ if outputDirectory[-1] != '/':
     outputDirectory += '/'
 dirList = os.listdir(outputDirectory)
 
-print
-print "           Directory of results:"
-print outputDirectory
+if not csv:
+    print
+    print "           Directory of results:"
+    print outputDirectory
 
 bestFitnessesOfRuns = []
 testFitnessOfBest = []
@@ -821,10 +829,11 @@ for line in f0:
         break
 
 while (outputFilePrefix + str(i) + outputFileSuffix) in dirList:
-    sys.stdout.write("%4i" % i)
-    sys.stdout.flush()
-    if i % 25 == 24:
-        print
+    if not csv:
+        sys.stdout.write("%4i" % i)
+        sys.stdout.flush()
+        if i % 25 == 24:
+            print
 
     runs = i + 1 # After this loop ends, runs should be correct
     fileName = (outputFilePrefix + str(i) + outputFileSuffix)
@@ -890,7 +899,8 @@ while (outputFilePrefix + str(i) + outputFileSuffix) in dirList:
             
     i += 1
 
-print
+if not csv:
+    print
 
 if verbose:
     print "Error threshold per case:", errorThresholdPerCase
@@ -960,14 +970,17 @@ if verbose and len(trainSolutionGens) > 0:
 
         # print testSolutionGens
 
-print "------------------------------------------------------------"
+if csv:
+    print "%s,%i,%i,%i,%i" % (outputDirectory, inds, perfectSolutions, perfectOnTestSet, simpPerfectOnTestSet)
 
-print "Number of finished runs:            %4i" % inds
-print "Solutions found:                    %4i" % (perfectSolutions)
-print "Zero error on test set:             %4i" % perfectOnTestSet
-print "Simplified zero error on test set:  %4i" % simpPerfectOnTestSet
-
-print "------------------------------------------------------------"
-
-if inds > 0:
-    print "MBF: %.5f" % (totalFitness / float(inds))
+else:
+    print "------------------------------------------------------------"
+    
+    print "Number of finished runs:            %4i" % inds
+    print "Solutions found:                    %4i" % (perfectSolutions)
+    print "Zero error on test set:             %4i" % perfectOnTestSet
+    print "Simplified zero error on test set:  %4i" % simpPerfectOnTestSet
+    
+    print "------------------------------------------------------------"
+    if inds > 0:
+        print "MBF: %.5f" % (totalFitness / float(inds))

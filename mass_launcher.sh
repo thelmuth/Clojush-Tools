@@ -2,21 +2,26 @@
 pythonscript="Tools/efficient_mean_fitness_and_solution_counts.py"
 
 #expdir="/home/thelmuth/Results/plushi/"
-#expdir="/home/thelmuth/Results/elitist-survival-2018/rate-80/lexicase/"
-expdir="/home/thelmuth/Results/elitist-survival-2018-not-UMAD/rate-50/lexicase/"
+#expdir="/home/thelmuth/Results/elitist-survival-2018/rate-90/lexicase/"
+#expdir="/home/thelmuth/Results/elitist-survival-2018-not-UMAD/rate-100/lexicase/"
+#expdir="/home/thelmuth/Results/elitist-survival-2018-not-UMAD/rate-30/tournament/"
+
+expdir="/home/thelmuth/Results/UMAD/tournament/size-neutral-add-delete/"
+#expdir="/home/thelmuth/Results/parent-selection-v3-UMAD/epsilon-lexicase/"
 
 declare -a namespaces=(
+    "compare-string-lengths"
+    "double-letters"
     "replace-space-with-newline"
-    "syllables"
-    "vector-average"
     "string-lengths-backwards"
+    "last-index-of-zero"
+    "vector-average"
     "mirror-image"
     "x-word-lines"
     "negative-to-zero"
-    "double-letters"
-    "last-index-of-zero"
-    "compare-string-lengths"
-    "sum-of-squares"
+    "scrabble-score"
+    "smallest"
+    "syllables"
 
     # "number-io"
     # "small-or-large"
@@ -42,6 +47,9 @@ declare -a namespaces=(
 for namespace in "${namespaces[@]}"
 do
     #echo "$namespace"
-    python $pythonscript "$expdir$namespace" brief
-
+    if [ "$1" != "" ]; then
+	python $pythonscript "$expdir$namespace" $1
+    else
+	python $pythonscript "$expdir$namespace" brief
+    fi
 done

@@ -55,16 +55,30 @@ from sys import maxint
 #         ("Vector Average", "/home/thelmuth/Results/parent-selection-v2/novelty-search/manhattan/vector-average/")
 #         ]
 
-dirs = [("csl", "/home/thelmuth/Results/parent-selection-v2/lexicase/compare-string-lengths/"),
-        ("median", "/home/thelmuth/Results/parent-selection-v2/lexicase/median/"),
-        ("smallest", "/home/thelmuth/Results/parent-selection-v2/lexicase/smallest/"),
-        ("super-ana", "/home/thelmuth/Results/parent-selection-v2/lexicase/super-anagrams/"),
-        ("digits", "/home/thelmuth/Results/parent-selection-v2/lexicase/digits/"),
-        ("FLI", "/home/thelmuth/Results/parent-selection-v2/lexicase/for-loop-index/"),
-        ("small-or-large", "/home/thelmuth/Results/parent-selection-v2/lexicase/small-or-large/"),
-        ("SLB", "/home/thelmuth/Results/parent-selection-v2/lexicase/string-lengths-backwards/"),
-        ("xwl", "/home/thelmuth/Results/parent-selection-v2/lexicase/x-word-lines/"),
-        ]
+# dirs = [("csl", "/home/thelmuth/Results/parent-selection-v2/lexicase/compare-string-lengths/"),
+#         ("median", "/home/thelmuth/Results/parent-selection-v2/lexicase/median/"),
+        # ("smallest", "/home/thelmuth/Results/parent-selection-v2/lexicase/smallest/"),
+        # ("super-ana", "/home/thelmuth/Results/parent-selection-v2/lexicase/super-anagrams/"),
+        # ("digits", "/home/thelmuth/Results/parent-selection-v2/lexicase/digits/"),
+        # ("FLI", "/home/thelmuth/Results/parent-selection-v2/lexicase/for-loop-index/"),
+        # ("small-or-large", "/home/thelmuth/Results/parent-selection-v2/lexicase/small-or-large/"),
+        # ("SLB", "/home/thelmuth/Results/parent-selection-v2/lexicase/string-lengths-backwards/"),
+        # ("xwl", "/home/thelmuth/Results/parent-selection-v2/lexicase/x-word-lines/"),
+        #]
+
+
+dirs = [("rate-10", "/home/thelmuth/Results/elitist-survival-2018-not-UMAD/rate-10/lexicase/vector-average/"),
+        ("rate-20", "/home/thelmuth/Results/elitist-survival-2018-not-UMAD/rate-20/lexicase/vector-average/"),
+        ("rate-30", "/home/thelmuth/Results/elitist-survival-2018-not-UMAD/rate-30/lexicase/vector-average/"),
+        ("rate-40", "/home/thelmuth/Results/elitist-survival-2018-not-UMAD/rate-40/lexicase/vector-average/"),
+        ("rate-50", "/home/thelmuth/Results/elitist-survival-2018-not-UMAD/rate-50/lexicase/vector-average/"),
+        ("rate-60", "/home/thelmuth/Results/elitist-survival-2018-not-UMAD/rate-60/lexicase/vector-average/"),
+        ("rate-70", "/home/thelmuth/Results/elitist-survival-2018-not-UMAD/rate-70/lexicase/vector-average/"),
+        ("rate-80", "/home/thelmuth/Results/elitist-survival-2018-not-UMAD/rate-80/lexicase/vector-average/"),
+        ("rate-90", "/home/thelmuth/Results/elitist-survival-2018-not-UMAD/rate-90/lexicase/vector-average/"),
+        ("rate-100", "/home/thelmuth/Results/elitist-survival-2018-not-UMAD/rate-100/lexicase/vector-average/")]
+
+
 
 outputFilePrefix = "log"
 outputFileSuffix = ".txt"
