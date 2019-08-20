@@ -42,7 +42,10 @@ from sys import maxint
 # outputDirectory = "Results/GECCO16/diversity-recovery/storing-populations/tourney-div-15/replace-space-with-newline/continuations/tournament/run0/"
 
 
-dirs = [("100-diversity", "/home/ahmadh19/Results/enforced-diverse-pop/string-lengths-backwards/")]
+#dirs = [("100-diversity", "/home/ahmadh19/Results/enforced-diverse-pop/string-lengths-backwards/")]
+dirs = [("novelty-search", "/home/thelmuth/Collab/thelmuth/Results/parent-selection-v2/novelty-search/syllables/")]
+
+
 
 outputFilePrefix = "log"
 outputFileSuffix = ".txt"

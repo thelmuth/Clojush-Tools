@@ -3,49 +3,10 @@ import os
 import sys
 
 # Set these before running:
-#outputDirectory = "Results/GECCO13/mom2/"
-#outputDirectory = "Results/GECCO13/mom2-lexicase/"
-#outputDirectory = "Results/GECCO13/mom2-ultra/"
-#outputDirectory = "Results/GECCO13/mom2-tags/"
-#outputDirectory = "Results/GECCO13/mom2-env/"
-#outputDirectory = "Results/GECCO13/mom2-lex-ultra/"
 
-#outputDirectory = "Results/GECCO13/mom3/"
-#outputDirectory = "Results/GECCO13/mom3-lexicase/"
-#outputDirectory = "Results/GECCO13/mom3-ultra/"
-#outputDirectory = "Results/GECCO13/mom3-lex-ultra/"
+outputDirectory = "Collab/aabdelha/results/last-index-of-zero10p/lexicase/last-index-of-zero/"
+outputDirectory = "Collab/aabdelha/results/scrabble-score10p/lexicase/scrabble-score/"
 
-#outputDirectory = "Results/GECCO13/big-mom3/mom3-lex-ultra/"
-
-#outputDirectory = "Results/GECCO13/mux6-normal/"
-#outputDirectory = "Results/GECCO13/mux6-ultra/"
-
-#outputDirectory = "Results/GECCO13/factorial-normal/"
-#outputDirectory = "Results/GECCO13/factorial-ultra/"
-#outputDirectory = "Results/GECCO13/factorial-ultra-large/"
-#outputDirectory = "Results/GECCO13/factorial-normal-500gens/"
-#outputDirectory = "Results/GECCO13/factorial-ultra-500gens/"
-
-#outputDirectory = "Results/lexicase-paper/ultra/dm3-lex/"
-#outputDirectory = "Results/thesis/change-exploratory/"
-#outputDirectory = "Results/thesis/change-exploratory-2/"
-
-#outputDirectory = "Results/GECCO14/wc/domains-lower-ultra-empties/"
-#outputDirectory = "Results/GECCO14/wc/domains-lower-ultra-padding/"
-#outputDirectory = "Results/GECCO14/wc/padding-max-points-1000/"
-#outputDirectory = "Results/GECCO14/wc/bushy-max-points-1000/"
-#outputDirectory = "Results/GECCO14/wc/empties-max-points-1000-RETRY/"
-outputDirectory = "Results/GECCO14/wc/empties-max-points-1000-two/"
-#outputDirectory = "Results/GECCO14/wc/ultra-params-01-01-100/"
-#outputDirectory = "Results/GECCO14/wc/ultra-params-01-01-0/"
-
-
-#outputDirectory = "Results/ULTRA-redo/pagie/ultra/"
-#outputDirectory = "Results/padding-ultra/pagie/padding/"
-#outputDirectory = "Results/padding-ultra/pagie/padding200/"
-#outputDirectory = "Results/padding-ultra/pagie/padding150/"
-#outputDirectory = "Results/padding-ultra/pagie/padding-bug-finding/"
-#outputDirectory = "Results/padding-ultra/pagie/fixed-padding/"
 
 outputFilePrefix = "log"
 outputFileSuffix = ".txt"
