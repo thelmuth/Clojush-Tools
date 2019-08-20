@@ -9,6 +9,11 @@
 import os, sys
 from sys import maxint
 
+verbose = True
+if (len(sys.argv) >= 2 and sys.argv[1] == "brief") or \
+        (len(sys.argv) >= 3 and sys.argv[2] == "brief"):
+    verbose = False
+
 # Set these before running:
 
 verbose = True
@@ -647,6 +652,32 @@ if (len(sys.argv) >= 2 and sys.argv[1] == "csv") or \
 #outputDirectory = "Results/parent-selection-v2/tournament/replace-space-with-newline/"
 #outputDirectory = "Results/parent-selection-v2/tournament/syllables/"
 #outputDirectory = "Results/parent-selection-v2/tournament/vector-average/"
+#outputDirectory = "Results/parent-selection-v2/tournament/string-lengths-backwards/"
+#outputDirectory = "Collab/thelmuth/Results/parent-selection-v2/tournament/number-io/"
+
+#outputDirectory = "/home/thelmuth/Collab/xhe/Results/alternation-and-most-important-case-simplification/lexicase-with-most-important-case/syllables0"
+
+#outputDirectory = "/home/thelmuth/Collab/thelmuth/Results/novelty-lexicase/genops-standard/replace-space-with-newline"
+#outputDirectory = "/home/thelmuth/Collab/thelmuth/Results/novelty-lexicase/genops-standard/syllables"
+
+
+### Lia's runs
+
+#outputDirectory = "/home/ljundt/Results/novelty-lexicase/syllables"
+
+
+#outputDirectory = "/home/thelmuth/Collab/thelmuth/Results/novelty-lexicase/genops-UMAD/replace-space-with-newline"
+#outputDirectory = "/home/thelmuth/Collab/thelmuth/Results/novelty-lexicase/genops-UMAD/syllables"
+#outputDirectory = "/home/thelmuth/Collab/thelmuth/Results/novelty-lexicase/genops-UMAD/vector-average"
+#outputDirectory = "/home/thelmuth/Collab/thelmuth/Results/novelty-lexicase/genops-UMAD/compare-string-lengths"
+#outputDirectory = "/home/thelmuth/Collab/thelmuth/Results/novelty-lexicase/gens-1000/genops-UMAD/replace-space-with-newline"
+
+#outputDirectory = "/home/thelmuth/Collab/thelmuth/Results/novelty-lexicase/gens-1000/genops-original/replace-space-with-newline"
+#outputDirectory = "/home/thelmuth/Collab/thelmuth/Results/novelty-lexicase/gens-1000/genops-original/syllables"
+#outputDirectory = "/home/thelmuth/Collab/thelmuth/Results/novelty-lexicase/gens-1000/genops-original/pig-latin"
+
+
+#outputDirectory = "/home/thelmuth/Collab/thelmuth/Results/novelty-lexicase/gens-1000/no-novelty-genops-original/replace-space-with-newline"
 
 
 ############
@@ -730,11 +761,9 @@ outputDirectory = "Results/wc-new-experiments/old-atom-gens/UMAD/wc"
 
 
 
-
 # This allows this script to take a command line argument for outputDirectory
 if len(sys.argv) > 1 and sys.argv[1] != "brief" and sys.argv[1] != "csv":
     outputDirectory = sys.argv[1]
-
 
 outputFilePrefix = "log"
 outputFileSuffix = ".txt"
@@ -854,6 +883,7 @@ while (outputFilePrefix + str(i) + outputFileSuffix) in dirList:
         i += 1
         continue
 
+    
     for line in reverse_readline(outputDirectory + fileName):
 
         if line.startswith(";; -*- Report") and gen == 0:
@@ -891,7 +921,6 @@ while (outputFilePrefix + str(i) + outputFileSuffix) in dirList:
                 simpBestTest = int(line.split()[-1].strip("Nn"))
             except ValueError, e:
                 simpBestTest = float(line.split()[-1].strip("Nn"))
-
 
     bestFitnessesOfRuns.append((gen, best_mean_error, done))
     testFitnessOfBest.append(bestTest)

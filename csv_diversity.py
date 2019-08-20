@@ -43,6 +43,7 @@ from sys import maxint
 
 
 #dirs = [("100-diversity", "/home/ahmadh19/Results/enforced-diverse-pop/string-lengths-backwards/")]
+#dirs = [("novelty-search", "/home/thelmuth/Collab/thelmuth/Results/parent-selection-v2/novelty-search/syllables/")]
 
 #dirs = [#("Double Letters", "/home/thelmuth/Results/parent-selection-v2/tournament/double-letters/"),
         #("Mirror Image", "/home/thelmuth/Results/parent-selection-v2/tournament/mirror-image/"),
@@ -77,6 +78,7 @@ dirs = [("rate-10", "/home/thelmuth/Results/elitist-survival-2018-not-UMAD/rate-
         ("rate-80", "/home/thelmuth/Results/elitist-survival-2018-not-UMAD/rate-80/lexicase/vector-average/"),
         ("rate-90", "/home/thelmuth/Results/elitist-survival-2018-not-UMAD/rate-90/lexicase/vector-average/"),
         ("rate-100", "/home/thelmuth/Results/elitist-survival-2018-not-UMAD/rate-100/lexicase/vector-average/")]
+
 
 
 
