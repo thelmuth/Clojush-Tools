@@ -1,18 +1,23 @@
 
 pythonscript="Tools/efficient_mean_fitness_and_solution_counts.py"
 
-#expdir="/home/thelmuth/Collab/thelmuth/Results/novelty-lexicase/gens-1000/genops-original/"
-expdir="/home/thelmuth/Collab/thelmuth/Results/novelty-lexicase/gens-1000/no-novelty-genops-original/"
+#expdir="/home/thelmuth/Results/parent-selection-v3-UMAD/epsilon-lexicase-no-preselection/"
+#expdir="/home/thelmuth/Results/parent-selection-v3-UMAD/interleaved-sampling/"
 
-#expdir="/home/thelmuth/Results/plushi/"
-#expdir="/home/thelmuth/Results/elitist-survival-2018/rate-90/lexicase/"
-#expdir="/home/thelmuth/Results/elitist-survival-2018-not-UMAD/rate-100/lexicase/"
-#expdir="/home/thelmuth/Results/elitist-survival-2018-not-UMAD/rate-30/tournament/"
+#expdir="/home/thelmuth/Results/parent-selection-v3-UMAD/batch-epsilon-lexicase/batch-size-10/"
+#expdir="/home/thelmuth/Results/parent-selection-v3-UMAD/batch-lexicase/batch-size-10/"
+#expdir="/home/thelmuth/Results/parent-selection-v3-UMAD/batch-lexicase-eliteness/batch-size-10/"
 
-#expdir="/home/thelmuth/Results/UMAD/tournament/size-neutral-add-delete/"
-#expdir="/home/thelmuth/Results/parent-selection-v3-UMAD/epsilon-lexicase/"
-#expdir="/home/thelmuth/Results/elitist-survival-2018/rate-80/lexicase/"
-#expdir="/home/thelmuth/Results/elitist-survival-2018-not-UMAD/rate-50/lexicase/"
+#expdir="/home/thelmuth/Results/specialists-and-lexicase/subset-tournament-normal/tournament-size-7/"
+#expdir="/home/thelmuth/Results/specialists-and-lexicase/subset-tournament-normal/tournament-size-1000/"
+#expdir="/home/thelmuth/Results/specialists-and-lexicase/subset-tournament-normal-mu0.1/tournament-size-7/"
+#expdir="/home/thelmuth/Results/specialists-and-lexicase/subset-tournament-normal-mu0.1/tournament-size-1000/"
+
+#expdir="/home/thelmuth/Results/parent-selection-v3-UMAD/downsample-novelty-lexicase-rate-0.25/"
+
+#expdir="/home/thelmuth/Results/parent-selection-v3-UMAD/downsample-lexicase/rate-0.25/"
+expdir="/home/thelmuth/Results/parent-selection-v3-UMAD/downsample-novelty-lexicase/rate-0.25/"
+
 
 declare -a namespaces=(
     "compare-string-lengths"
