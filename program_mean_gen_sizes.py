@@ -1,5 +1,5 @@
 #import math
-import os
+import os, sys
 from sys import maxint
 
 # Set these before running:
@@ -32,7 +32,13 @@ from sys import maxint
 #outputDirectory = "Results/GECCO14/wc/padding-max-points-1000/"
 #outputDirectory = "Results/GECCO14/wc/bushy-max-points-1000/"
 
-outputDirectory = "Results/plush-testing/dm2-uniform-xover-mut/"
+outputDirectory = "Results/parent-selection-v3-UMAD/uniform/smallest/"
+
+
+# This allows this script to take a command line argument for outputDirectory
+if len(sys.argv) > 1 and sys.argv[1] != "brief" and sys.argv[1] != "csv":
+    outputDirectory = sys.argv[1]
+
 
 outputFilePrefix = "log"
 outputFileSuffix = ".txt"

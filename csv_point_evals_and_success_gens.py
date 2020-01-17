@@ -53,7 +53,7 @@ error_threshold = 0
 
 # Autoconstruction
 
-dirs = [("standard", "Results/bench-prog-synth/replace-space-with-newline/parent-selection/lexicase/"),
+dirs = [("standard", "Results/Parent-selection-v1/replace-space-with-newline/parent-selection/lexicase"),
         ("autoconstruction", "zzResults/autoconstruction/replace-space-with-newline/trial1/")]
 
 

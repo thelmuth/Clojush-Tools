@@ -1,5 +1,5 @@
 #!/usr/bin/python
-import os
+import os, sys
 from sys import maxint
 
 # Set these before running:
@@ -8,78 +8,14 @@ print_bd = True
 print_errordiv = False
 print_ham = False
 
-#outputDirectory = "Results/bench-prog-synth/checksum/exploratory/lexicase/"
-#outputDirectory = "Results/bench-prog-synth/checksum/exploratory/two-tests-lexicase/"
-#outputDirectory = "Results/bench-prog-synth/checksum/exploratory/two-tests-better-lexicase/"
-#outputDirectory = "Results/bench-prog-synth/checksum/exploratory/while-lexicase/"
-
-#outputDirectory = "Results/parent-selection-v2/lexicase/replace-space-with-newline/"
-#outputDirectory = "Results/parent-selection-v2/lexicase/syllables/"
-#outputDirectory = "Results/parent-selection-v2/lexicase/vector-average/"
-#outputDirectory = "Results/parent-selection-v2/lexicase/double-letters/"
-#outputDirectory = "Results/parent-selection-v2/lexicase/mirror-image/"
-#outputDirectory = "Results/parent-selection-v2/lexicase/last-index-of-zero/"
-outputDirectory = "Results/parent-selection-v2/lexicase/scrabble-score/"
-#outputDirectory = "Results/parent-selection-v2/lexicase//"
-#outputDirectory = "Results/parent-selection-v2/lexicase//"
-#outputDirectory = "Results/parent-selection-v2/lexicase//"
-#outputDirectory = "Results/parent-selection-v2/lexicase//"
-
-
-#outputDirectory = "/home/thelmuth/Results/parent-selection-v2/tournament/replace-space-with-newline/"
-#outputDirectory = "/home/thelmuth/Results/parent-selection-v2/tournament/syllables/"
-#outputDirectory = "/home/thelmuth/Results/parent-selection-v2/tournament/vector-average/"
+#outputDirectory = "Results/parent-selection-v3-UMAD/downsample-lexicase/rate-0.25/syllables/"
+#outputDirectory = "Results/parent-selection-v3-UMAD/lexicase/syllables"
+outputDirectory = "Results/specialists-and-lexicase/elitist-survival-2018-not-UMAD/rate-100/lexicase/syllables"
 
 
 
-######## Diversity Recovery trials
-## Drop 25
-#outputDirectory = "Results/GECCO16/diversity-recovery/storing-populations/lex-div-drop-25/replace-space-with-newline/continuations/lexicase/run0/"
-#outputDirectory = "Results/GECCO16/diversity-recovery/storing-populations/lex-div-drop-25/replace-space-with-newline/continuations/tournament/run0/"
-
-#outputDirectory = "Results/GECCO16/diversity-recovery/storing-populations/lex-div-drop-25/replace-space-with-newline/continuations/lexicase/run8/"
-#outputDirectory = "Results/GECCO16/diversity-recovery/storing-populations/lex-div-drop-25/replace-space-with-newline/continuations/tournament/run8/"
-
-## Div90
-#outputDirectory = "Results/GECCO16/diversity-recovery/storing-populations/lex-div-90/replace-space-with-newline/continuations/lexicase/run6/"
-#outputDirectory = "Results/GECCO16/diversity-recovery/storing-populations/lex-div-90/replace-space-with-newline/continuations/tournament/run6/"
-
-#outputDirectory = "Results/GECCO16/diversity-recovery/storing-populations/lex-div-90/replace-space-with-newline/continuations/lexicase/run10/"
-#outputDirectory = "Results/GECCO16/diversity-recovery/storing-populations/lex-div-90/replace-space-with-newline/continuations/tournament/run10/"
-
-## Tourney < 15
-#outputDirectory = "Results/GECCO16/diversity-recovery/storing-populations/tourney-div-15/replace-space-with-newline/continuations/lexicase/run0/"
-#outputDirectory = "Results/GECCO16/diversity-recovery/storing-populations/tourney-div-15/replace-space-with-newline/continuations/tournament/run0/"
-
-#outputDirectory = "Results/GECCO16/diversity-recovery/storing-populations/tourney-div-15/replace-space-with-newline/continuations/lexicase/run1/"
-#outputDirectory = "Results/GECCO16/diversity-recovery/storing-populations/tourney-div-15/replace-space-with-newline/continuations/tournament/run1/"
-
-
-##### Double Letters #####
-#------------------------#
-
-## Div Drop 25
-#outputDirectory = "Results/GECCO16/diversity-recovery/storing-populations/lex-div-drop-25/double-letters/continuations/lexicase/run0/"
-#outputDirectory = "Results/GECCO16/diversity-recovery/storing-populations/lex-div-drop-25/double-letters/continuations/tournament/run0/"
-
-#outputDirectory = "Results/GECCO16/diversity-recovery/storing-populations/lex-div-drop-25/double-letters/continuations/lexicase/run21/"
-#outputDirectory = "Results/GECCO16/diversity-recovery/storing-populations/lex-div-drop-25/double-letters/continuations/tournament/run21/"
-
-## Div 90
-#outputDirectory = "Results/GECCO16/diversity-recovery/storing-populations/lex-div-90/double-letters/continuations/lexicase/run0/"
-#outputDirectory = "Results/GECCO16/diversity-recovery/storing-populations/lex-div-90/double-letters/continuations/tournament/run0/"
-
-#outputDirectory = "Results/GECCO16/diversity-recovery/storing-populations/lex-div-90/double-letters/continuations/lexicase/run3/"
-#outputDirectory = "Results/GECCO16/diversity-recovery/storing-populations/lex-div-90/double-letters/continuations/tournament/run3/"
-
-## Tourney < 15
-#outputDirectory = "Results/GECCO16/diversity-recovery/storing-populations/tourney-div-15/double-letters/continuations/lexicase/run0/"
-#outputDirectory = "Results/GECCO16/diversity-recovery/storing-populations/tourney-div-15/double-letters/continuations/tournament/run0/"
-
-#outputDirectory = "Results/GECCO16/diversity-recovery/storing-populations/tourney-div-15/double-letters/continuations/lexicase/run1/"
-#outputDirectory = "Results/GECCO16/diversity-recovery/storing-populations/tourney-div-15/double-letters/continuations/tournament/run1/"
-
-
+if len(sys.argv) > 1:
+    outputDirectory = sys.argv[1]
 
 outputFilePrefix = "log"
 outputFileSuffix = ".txt"

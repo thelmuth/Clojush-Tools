@@ -6,24 +6,30 @@ from sys import maxint
 # Set these before running:
 
 error_threshold = 0
-max_gens = 1000
+max_gens = 300
 
 # Novelty Lexicase
 
 #main_dir = "/home/thelmuth/Collab/thelmuth/Results/novelty-lexicase/gens-1000/genops-original/"
-main_dir = "/home/thelmuth/Collab/thelmuth/Results/novelty-lexicase/gens-1000/no-novelty-genops-original/"
+#main_dir = "/home/thelmuth/Collab/thelmuth/Results/novelty-lexicase/gens-1000/no-novelty-genops-original/"
 
-probs = ["compare-string-lengths",
-         "double-letters",
-         "replace-space-with-newline",
-         "last-index-of-zero",
-         "vector-average",
+
+main_dir = "/home/thelmuth/Results/specialists-and-lexicase/elitist-survival-2018-not-UMAD/rate-100/lexicase/"
+
+
+probs = [#"compare-string-lengths",
+         #"double-letters",
+         "last-index-of-zero",         
          "mirror-image",
-         "x-word-lines",
          "negative-to-zero",
-         "scrabble-score",
+         "replace-space-with-newline",
+         "string-lengths-backwards",
+         "syllables",
+         "vector-average",
+         "x-word-lines",
+         #"scrabble-score",
          #pig-latin",
-         "syllables"]
+         ]
 
 dirs = [(prob, main_dir + prob) for prob in probs]
 

@@ -1,22 +1,27 @@
 
 pythonscript="Tools/efficient_mean_fitness_and_solution_counts.py"
 
-#expdir="/home/thelmuth/Results/parent-selection-v3-UMAD/epsilon-lexicase-no-preselection/"
-#expdir="/home/thelmuth/Results/parent-selection-v3-UMAD/interleaved-sampling/"
+#expdir="/home/thelmuth/Results/parent-selection-v3-UMAD/batch-tournament/batch-size-8-tournament-size-64/"
+#expdir="/home/thelmuth/Results/parent-selection-v3-UMAD/batch-tournament/batch-size-8-tournament-size-7/"
 
-#expdir="/home/thelmuth/Results/parent-selection-v3-UMAD/batch-epsilon-lexicase/batch-size-10/"
-#expdir="/home/thelmuth/Results/parent-selection-v3-UMAD/batch-lexicase/batch-size-10/"
-#expdir="/home/thelmuth/Results/parent-selection-v3-UMAD/batch-lexicase-eliteness/batch-size-10/"
+#expdir="/home/thelmuth/Results/parent-selection-v3-UMAD/tournament/size-64/"
 
-#expdir="/home/thelmuth/Results/specialists-and-lexicase/subset-tournament-normal/tournament-size-7/"
-#expdir="/home/thelmuth/Results/specialists-and-lexicase/subset-tournament-normal/tournament-size-1000/"
-#expdir="/home/thelmuth/Results/specialists-and-lexicase/subset-tournament-normal-mu0.1/tournament-size-7/"
-#expdir="/home/thelmuth/Results/specialists-and-lexicase/subset-tournament-normal-mu0.1/tournament-size-1000/"
+#expdir="/home/thelmuth/Results/parent-selection-v3-UMAD/knobelty/hamming/knobelty-novelty-probability-0.2/"
+#expdir="/home/thelmuth/Results/parent-selection-v3-UMAD/knobelty/manhattan/knobelty-novelty-probability-0.2/"
 
-#expdir="/home/thelmuth/Results/parent-selection-v3-UMAD/downsample-novelty-lexicase-rate-0.25/"
+#expdir="/home/thelmuth/Results/parent-selection-v3-UMAD/madcap-epsilon-lexicase/semi-dynamic/rate-of-zero-epsilon-0.5/"
 
-#expdir="/home/thelmuth/Results/parent-selection-v3-UMAD/downsample-lexicase/rate-0.25/"
-expdir="/home/thelmuth/Results/parent-selection-v3-UMAD/downsample-novelty-lexicase/rate-0.25/"
+#expdir="/home/thelmuth/Results/parent-selection-v3-UMAD/pool-lexicase/pool-size-10/"
+
+#expdir="/home/thelmuth/Results/parent-selection-v3-UMAD/novelty-search/hamming-distance/"
+#expdir="/home/thelmuth/Results/parent-selection-v3-UMAD/novelty-search/manhattan-distance/"
+
+#expdir="/home/thelmuth/Results/parent-selection-v3-UMAD/pareto-tournament/objectives-total-error-size/tournament-size-32/"
+#expdir="/home/thelmuth/Results/parent-selection-v3-UMAD/pareto-tournament/objectives-total-error-age/tournament-size-32/"
+
+#expdir="/home/thelmuth/Results/parent-selection-v3-UMAD/co-solvability/divide-by-max-error/"
+
+expdir=$1
 
 
 declare -a namespaces=(
@@ -33,32 +38,32 @@ declare -a namespaces=(
     "smallest"
     "syllables"
 
-    # "number-io"
-    # "small-or-large"
-    # "for-loop-index"
-    # "string-differences"
-    # "even-squares"
-    # "count-odds"
-    # "super-anagrams"
-    # "vectors-summed"
-    # "scrabble-score"
-    # "checksum"
-    # "digits"
-    # "grade"
-    # "median"
-    # "smallest"
+    "number-io"
+    "small-or-large"
+    "for-loop-index"
+    "string-differences"
+    "even-squares"
+    "count-odds"
+    "super-anagrams"
+    "sum-of-squares"
+    "vectors-summed"
+    "pig-latin"
+    "checksum"
+    "digits"
+    "grade"
+    "median"
+
 
     # "collatz-numbers"
     # "wallis-pi"
-    # "pig-latin"
     # "word-stats"
 )
 
 for namespace in "${namespaces[@]}"
 do
     #echo "$namespace"
-    if [ "$1" != "" ]; then
-	python $pythonscript "$expdir$namespace" $1
+    if [ "$2" != "" ]; then
+	python $pythonscript "$expdir$namespace" $2
     else
 	python $pythonscript "$expdir$namespace" brief
     fi

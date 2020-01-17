@@ -68,16 +68,16 @@ from sys import maxint
         #]
 
 
-dirs = [("rate-10", "/home/thelmuth/Results/elitist-survival-2018-not-UMAD/rate-10/lexicase/vector-average/"),
-        ("rate-20", "/home/thelmuth/Results/elitist-survival-2018-not-UMAD/rate-20/lexicase/vector-average/"),
-        ("rate-30", "/home/thelmuth/Results/elitist-survival-2018-not-UMAD/rate-30/lexicase/vector-average/"),
-        ("rate-40", "/home/thelmuth/Results/elitist-survival-2018-not-UMAD/rate-40/lexicase/vector-average/"),
-        ("rate-50", "/home/thelmuth/Results/elitist-survival-2018-not-UMAD/rate-50/lexicase/vector-average/"),
-        ("rate-60", "/home/thelmuth/Results/elitist-survival-2018-not-UMAD/rate-60/lexicase/vector-average/"),
-        ("rate-70", "/home/thelmuth/Results/elitist-survival-2018-not-UMAD/rate-70/lexicase/vector-average/"),
-        ("rate-80", "/home/thelmuth/Results/elitist-survival-2018-not-UMAD/rate-80/lexicase/vector-average/"),
-        ("rate-90", "/home/thelmuth/Results/elitist-survival-2018-not-UMAD/rate-90/lexicase/vector-average/"),
-        ("rate-100", "/home/thelmuth/Results/elitist-survival-2018-not-UMAD/rate-100/lexicase/vector-average/")]
+dirs = [("rate-10", "/home/thelmuth/Results/specialists-and-lexicase/elitist-survival-2018-not-UMAD/rate-10/lexicase/x-word-lines/"),
+        ("rate-20", "/home/thelmuth/Results/specialists-and-lexicase/elitist-survival-2018-not-UMAD/rate-20/lexicase/x-word-lines/"),
+        ("rate-30", "/home/thelmuth/Results/specialists-and-lexicase/elitist-survival-2018-not-UMAD/rate-30/lexicase/x-word-lines/"),
+        ("rate-40", "/home/thelmuth/Results/specialists-and-lexicase/elitist-survival-2018-not-UMAD/rate-40/lexicase/x-word-lines/"),
+        ("rate-50", "/home/thelmuth/Results/specialists-and-lexicase/elitist-survival-2018-not-UMAD/rate-50/lexicase/x-word-lines/"),
+        ("rate-60", "/home/thelmuth/Results/specialists-and-lexicase/elitist-survival-2018-not-UMAD/rate-60/lexicase/x-word-lines/"),
+        ("rate-70", "/home/thelmuth/Results/specialists-and-lexicase/elitist-survival-2018-not-UMAD/rate-70/lexicase/x-word-lines/"),
+        ("rate-80", "/home/thelmuth/Results/specialists-and-lexicase/elitist-survival-2018-not-UMAD/rate-80/lexicase/x-word-lines/"),
+        ("rate-90", "/home/thelmuth/Results/specialists-and-lexicase/elitist-survival-2018-not-UMAD/rate-90/lexicase/x-word-lines/"),
+        ("rate-100", "/home/thelmuth/Results/specialists-and-lexicase/elitist-survival-2018-not-UMAD/rate-100/lexicase/x-word-lines/")]
 
 
 
