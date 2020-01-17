@@ -28,6 +28,8 @@ dirs = [#("lexicase", normal_training_cases_size, "/home/thelmuth/Results/parent
 ]
 
 
+for (prob, rate, direct) in dirs:
+    print prob, " - ", direct
 
 
 outputFilePrefix = "log"
