@@ -14,7 +14,13 @@ if (len(sys.argv) >= 2 and sys.argv[1] == "brief") or \
         (len(sys.argv) >= 3 and sys.argv[2] == "brief"):
     verbose = False
 
+csv = False
+if (len(sys.argv) >= 2 and sys.argv[1] == "csv") or \
+        (len(sys.argv) >= 3 and sys.argv[2] == "csv"):
+    csv = True
+    verbose = False
 
+# Set these before running:
 
 csv = False
 

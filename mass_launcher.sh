@@ -1,8 +1,8 @@
 
 pythonscript="Tools/efficient_mean_fitness_and_solution_counts.py"
 
-#expdir="/home/thelmuth/Collab/thelmuth/Results/novelty-lexicase/gens-1000/genops-original/"
-#expdir="/home/thelmuth/Collab/thelmuth/Results/novelty-lexicase/gens-1000/no-novelty-genops-original/"
+#expdir="/home/thelmuth/Results/parent-selection-v3-UMAD/batch-tournament/batch-size-8-tournament-size-64/"
+#expdir="/home/thelmuth/Results/parent-selection-v3-UMAD/batch-tournament/batch-size-8-tournament-size-7/"
 
 #expdir="/home/thelmuth/Collab/thelmuth/Results/epigenetic-tags/"
 
@@ -28,24 +28,24 @@ declare -a namespaces=(
     "smallest"
     "syllables"
 
-    # "number-io"
-    # "small-or-large"
-    # "for-loop-index"
-    # "string-differences"
-    # "even-squares"
-    # "count-odds"
-    # "super-anagrams"
-    # "vectors-summed"
-    # "scrabble-score"
-    # "checksum"
-    # "digits"
-    # "grade"
-    # "median"
-    # "smallest"
+    "number-io"
+    "small-or-large"
+    "for-loop-index"
+    "string-differences"
+    "even-squares"
+    "count-odds"
+    "super-anagrams"
+    "sum-of-squares"
+    "vectors-summed"
+    "pig-latin"
+    "checksum"
+    "digits"
+    "grade"
+    "median"
+
 
     # "collatz-numbers"
     # "wallis-pi"
-    # "pig-latin"
     # "word-stats"
 )
 
