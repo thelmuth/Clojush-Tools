@@ -8,7 +8,7 @@ import os, sys
 from sys import maxint
 
 # Set these before running:
-problem = "double-letters"
+problem = "mirror-image"
 error_threshold = 0
 
 max_executions = 30000000
@@ -17,15 +17,15 @@ normal_training_cases_size = int(max_executions / (1000 * 300))
 print "Normal training cases size =", normal_training_cases_size
 
 # Dirs for downsampled lexicase
-# dirs = [("lexicase", normal_training_cases_size, "/home/thelmuth/Results/parent-selection-v3-UMAD/lexicase/%s" % problem),
-#         ("downsample-25", int(normal_training_cases_size * 0.25), "/home/thelmuth/Results/parent-selection-v3-UMAD/downsample-lexicase/rate-0.25/%s" % problem),
-#         ("downsample-10", int(normal_training_cases_size * 0.1), "/home/thelmuth/Results/parent-selection-v3-UMAD/downsample-lexicase/rate-0.1/%s" % problem)
-# ]
-
 dirs = [#("lexicase", normal_training_cases_size, "/home/thelmuth/Results/parent-selection-v3-UMAD/lexicase/%s" % problem),
-        ("CDGP", False, "/home/thelmuth/Collab/thelmuth/Results/counterexample-driven-gp/no-generational-case-additions/%s" % problem),
-        ("CDGP50", False, "/home/thelmuth/Collab/thelmuth/Results/counterexample-driven-gp/add-case-after-50-gens/%s" % problem)
+        ("downsample-25", int(normal_training_cases_size * 0.25), "/home/thelmuth/Results/parent-selection-v3-UMAD/downsample-lexicase/rate-0.25/%s" % problem),
+        #("downsample-10", int(normal_training_cases_size * 0.1), "/home/thelmuth/Results/parent-selection-v3-UMAD/downsample-lexicase/rate-0.1/%s" % problem)
 ]
+
+# dirs = [#("lexicase", normal_training_cases_size, "/home/thelmuth/Results/parent-selection-v3-UMAD/lexicase/%s" % problem),
+#         ("CDGP", False, "/home/thelmuth/Collab/thelmuth/Results/counterexample-driven-gp/no-generational-case-additions/%s" % problem),
+#         ("CDGP50", False, "/home/thelmuth/Collab/thelmuth/Results/counterexample-driven-gp/add-case-after-50-gens/%s" % problem)
+# ]
 
 
 for (prob, rate, direct) in dirs:
@@ -71,7 +71,7 @@ def getSuccessProgExecs(outputDirectory, cases_size):
                 else:
                     simpTestSuccess = False
 
-            if line.startswith("Test total error for best:") and simpTestSuccess != -1:
+            elif line.startswith("Test total error for best:") and simpTestSuccess != -1:
                 try:
                     bestTest = int(line.split()[-1].strip("Nn"))
                 except ValueError, e:
@@ -135,19 +135,3 @@ for (prob, cases_size, directory) in dirs:
 
     print "%s,%i,%i,%i,%i" % (prob, max_executions, train, test, simp)
 
-
-"""
-    print
-    print prob
-    print "Train:", train_success_progexecs
-    print "Test:", test_success_progexecs
-    print "TestSimp:", simplified_test_success_progexecs
-"""
-"""
-    for prog_execs in range(0, max_gens + 1):
-        train_this_prog_execs = numbers_leq_x(train_success_progexecs, prog_execs)
-        test_this_prog_execs =  numbers_leq_x(test_success_progexecs, prog_execs)
-        simp_this_prog_execs =  numbers_leq_x(simplified_test_success_progexecs, prog_execs)
-        
-        print "%s,%i,%i,%i,%i" % (prob, prog_execs, train_this_prog_execs, test_this_prog_execs, simp_this_prog_execs)
-"""
