@@ -100,28 +100,6 @@ if not csv:
 bestFitnessesOfRuns = []
 testFitnessOfBest = []
 testFitnessOfSimplifiedBest = []
-errorThreshold = maxint
-errorThresholdPerCase = maxint
-numCases = maxint
-
-fileName0 = (outputFilePrefix + str(i) + outputFileSuffix)
-f0 = open(outputDirectory + fileName0)
-
-for line in f0:
-    if line.startswith("error-threshold"):
-        try:
-            errorThreshold = int(line.split()[-1])
-        except ValueError, e:
-            errorThreshold = float(line.split()[-1])
-        if errorThreshold == 0:
-            errorThresholdPerCase = 0
-
-    if errorThresholdPerCase == maxint and line.startswith("Errors:"):
-        numCases = len(line.split()) - 1
-        errorThresholdPerCase = float(errorThreshold) / numCases
-
-    if errorThresholdPerCase != maxint and numCases != maxint:
-        break
 
 while (outputFilePrefix + str(i) + outputFileSuffix) in dirList:
     if not csv:
@@ -152,10 +130,10 @@ while (outputFilePrefix + str(i) + outputFileSuffix) in dirList:
     
     for line in reverse_readline(outputDirectory + fileName):
 
-        if line.startswith(";; -*- Report") and gen == 0:
+        if line.startswith("Ind:") and gen == 0:
             gen = int(line.split()[-1])
 
-        if gen != 0 and best_mean_error < maxint:
+        if gen != 0 and done != False:
             break
 
         if line.startswith("SUCCESS"):
@@ -163,18 +141,6 @@ while (outputFilePrefix + str(i) + outputFileSuffix) in dirList:
 
         if line.startswith("FAILURE"):
             done = "FAILURE"
-
-        if line.startswith("Mean:"):
-            gen_best_error = -1
-            if errorType == "float":
-                gen_best_error = float(line.split()[-1])
-            elif errorType == "int" or errorType == "integer":
-                gen_best_error = int(line.split()[-1])
-            else:
-                raise Exception("errorType of %s is not recognized" % errorType)
-
-            if gen_best_error < best_mean_error:
-                best_mean_error = gen_best_error
 
         if line.startswith("Test total error for best:") and done:
             try:
@@ -188,7 +154,7 @@ while (outputFilePrefix + str(i) + outputFileSuffix) in dirList:
             except ValueError, e:
                 simpBestTest = float(line.split()[-1].strip("Nn"))
 
-    bestFitnessesOfRuns.append((gen, best_mean_error, done))
+    bestFitnessesOfRuns.append((gen, done))
     testFitnessOfBest.append(bestTest)
     testFitnessOfSimplifiedBest.append(simpBestTest)
             
@@ -200,12 +166,11 @@ if not csv:
 
 not_done = []
 if verbose:
-    print "Error threshold per case:", errorThresholdPerCase
     print "-------------------------------------------------"
 
-    for i, (gen, fitness, done) in enumerate(bestFitnessesOfRuns):
+    for i, (gen, done) in enumerate(bestFitnessesOfRuns):
         doneSym = ""
-        if fitness <= errorThresholdPerCase: # This didn't work for counterexample-driven GP        
+        if done == "SUCCESS": # This didn't work for counterexample-driven GP        
             doneSym = " <- suc"
             if not done:
                 doneSym += "$$$$$$ ERROR $$$$$$" #Should never get here
@@ -222,10 +187,8 @@ if verbose:
         elif not done:
             doneSym = " -- not done"
             not_done.append(i)
-        if fitness >= 0.001 or fitness == 0.0:
-            print "Run: %3i  | Gen: %5i  | Best Fitness (mean) = %8.4f%s" % (i, gen, fitness, doneSym)
-        else:
-            print "Run: %3i  | Gen: %5i  | Best Fitness (mean) = %.4e%s" % (i, gen, fitness, doneSym)
+
+        print "Run: %3i  | Gen: %5i  | %s" % (i, gen, doneSym)
 
 totalFitness = 0
 inds = 0
@@ -235,19 +198,18 @@ simpPerfectOnTestSet = 0
 trainSolutionGens = []
 testSolutionGens = []
 
-for i, (gen, fitness, done) in enumerate(bestFitnessesOfRuns):
+for i, (gen, done) in enumerate(bestFitnessesOfRuns):
     if done:
-        totalFitness += fitness
         inds += 1
-        if fitness <= errorThresholdPerCase:
+        if done == "SUCCESS":
             perfectSolutions += 1
             trainSolutionGens.append(gen)
             if len(testFitnessOfBest) > i:
-                if testFitnessOfBest[i] <= errorThresholdPerCase:
+                if testFitnessOfBest[i] <= 0:
                     perfectOnTestSet += 1
                     testSolutionGens.append(gen)
             if len(testFitnessOfSimplifiedBest) > i:
-                if testFitnessOfSimplifiedBest[i] <= errorThresholdPerCase:
+                if testFitnessOfSimplifiedBest[i] <= 0:
                     simpPerfectOnTestSet += 1
 
 if verbose and len(trainSolutionGens) > 0:
@@ -287,5 +249,3 @@ else:
     print
     
     print "------------------------------------------------------------"
-    if inds > 0:
-        print "MBF: %.5f" % (totalFitness / float(inds))

@@ -48,6 +48,15 @@ def median(lst):
         return (sorts[length / 2] + sorts[length / 2 - 1]) / 2.0
     return sorts[length / 2]
 
+def kth_percent_smallest_number(lst, percent):
+    """Finds the k = len(lst) * percent number in the lst."""
+    if len(lst) <= 0:
+        return False
+    sorts = sorted(lst)
+    length = len(lst)
+    k = int(length * percent)
+    return sorts[k]
+
 def mean(nums):
     if len(nums) <= 0:
         return False
@@ -100,9 +109,10 @@ if not csv:
 bestFitnessesOfRuns = []
 testFitnessOfBest = []
 testFitnessOfSimplifiedBest = []
+numExecutionsList = []
 errorThreshold = maxint
 errorThresholdPerCase = maxint
-numCases = maxint
+numErrors = maxint
 
 fileName0 = (outputFilePrefix + str(i) + outputFileSuffix)
 f0 = open(outputDirectory + fileName0)
@@ -117,10 +127,10 @@ for line in f0:
             errorThresholdPerCase = 0
 
     if errorThresholdPerCase == maxint and line.startswith("Errors:"):
-        numCases = len(line.split()) - 1
-        errorThresholdPerCase = float(errorThreshold) / numCases
+        numErrors = len(line.split()) - 1
+        errorThresholdPerCase = float(errorThreshold) / numErrors
 
-    if errorThresholdPerCase != maxint and numCases != maxint:
+    if errorThresholdPerCase != maxint and numErrors != maxint:
         break
 
 while (outputFilePrefix + str(i) + outputFileSuffix) in dirList:
@@ -141,6 +151,7 @@ while (outputFilePrefix + str(i) + outputFileSuffix) in dirList:
 
     bestTest = maxint
     simpBestTest = maxint
+    numExecutions = maxint
 
     if os.path.getsize(outputDirectory + fileName) == 0:
         bestFitnessesOfRuns.append((gen, best_mean_error, done))
@@ -155,7 +166,7 @@ while (outputFilePrefix + str(i) + outputFileSuffix) in dirList:
         if line.startswith(";; -*- Report") and gen == 0:
             gen = int(line.split()[-1])
 
-        if gen != 0 and best_mean_error < maxint:
+        if gen != 0 and best_mean_error < maxint and numExecutions != maxint:
             break
 
         if line.startswith("SUCCESS"):
@@ -188,9 +199,13 @@ while (outputFilePrefix + str(i) + outputFileSuffix) in dirList:
             except ValueError, e:
                 simpBestTest = float(line.split()[-1].strip("Nn"))
 
+        if line.startswith("Number of program executions") and numExecutions == maxint:
+            numExecutions = int(line.split()[-1].strip("Nn"))
+
     bestFitnessesOfRuns.append((gen, best_mean_error, done))
     testFitnessOfBest.append(bestTest)
     testFitnessOfSimplifiedBest.append(simpBestTest)
+    numExecutionsList.append(numExecutions)
             
     i += 1
 
@@ -205,7 +220,7 @@ if verbose:
 
     for i, (gen, fitness, done) in enumerate(bestFitnessesOfRuns):
         doneSym = ""
-        if fitness <= errorThresholdPerCase: # This didn't work for counterexample-driven GP        
+        if done == "SUCCESS":
             doneSym = " <- suc"
             if not done:
                 doneSym += "$$$$$$ ERROR $$$$$$" #Should never get here
@@ -223,9 +238,9 @@ if verbose:
             doneSym = " -- not done"
             not_done.append(i)
         if fitness >= 0.001 or fitness == 0.0:
-            print "Run: %3i  | Gen: %5i  | Best Fitness (mean) = %8.4f%s" % (i, gen, fitness, doneSym)
+            print "Run: %3i  | Gen: %5i  | Best Fitness (mean) = %8.4f%s | Program Executions = %i" % (i, gen, fitness, doneSym, numExecutionsList[i])
         else:
-            print "Run: %3i  | Gen: %5i  | Best Fitness (mean) = %.4e%s" % (i, gen, fitness, doneSym)
+            print "Run: %3i  | Gen: %5i  | Best Fitness (mean) = %.4e%s | Program Executions = %i" % (i, gen, fitness, doneSym, numExecutionsList[i])
 
 totalFitness = 0
 inds = 0
@@ -234,21 +249,24 @@ perfectOnTestSet = 0
 simpPerfectOnTestSet = 0
 trainSolutionGens = []
 testSolutionGens = []
+testSolutionProgramExecutions = []
 
 for i, (gen, fitness, done) in enumerate(bestFitnessesOfRuns):
     if done:
         totalFitness += fitness
         inds += 1
-        if fitness <= errorThresholdPerCase:
+        if done == "SUCCESS":
             perfectSolutions += 1
             trainSolutionGens.append(gen)
             if len(testFitnessOfBest) > i:
                 if testFitnessOfBest[i] <= errorThresholdPerCase:
                     perfectOnTestSet += 1
                     testSolutionGens.append(gen)
+                    testSolutionProgramExecutions.append(numExecutionsList[i])
             if len(testFitnessOfSimplifiedBest) > i:
                 if testFitnessOfSimplifiedBest[i] <= errorThresholdPerCase:
                     simpPerfectOnTestSet += 1
+
 
 if verbose and len(trainSolutionGens) > 0:
     print "------------------------------------------------------------"
@@ -260,11 +278,20 @@ if verbose and len(trainSolutionGens) > 0:
 
     if len(testSolutionGens) > 0:
         print "--------------------------"
-        print "Test Solution Generations:"
+        print "Test Solution Generations (not simplified):"
         print "Mean:      ", mean(testSolutionGens)
         print "Minimum:   ", min(testSolutionGens)
         print "Median:    ", median(testSolutionGens)
         print "Maximum:   ", max(testSolutionGens)
+
+        print "--------------------------"
+        print "Test solution program executions (not simplified):"
+        print "Mean:      ", mean(testSolutionProgramExecutions)
+        print "Minimum:   ", min(testSolutionProgramExecutions)
+        print "25%:       ", kth_percent_smallest_number(testSolutionProgramExecutions, 0.25)
+        print "Median:    ", median(testSolutionProgramExecutions)
+        print "75%:       ", kth_percent_smallest_number(testSolutionProgramExecutions, 0.75)
+        print "Maximum:   ", max(testSolutionProgramExecutions)
 
         # print testSolutionGens
 

@@ -4,15 +4,15 @@ pythonscript="Tools/efficient_mean_fitness_and_solution_counts.py"
 #expdir="/home/thelmuth/Collab/thelmuth/Results/novelty-lexicase/gens-1000/genops-original/"
 #expdir="/home/thelmuth/Collab/thelmuth/Results/novelty-lexicase/gens-1000/no-novelty-genops-original/"
 
-#expdir="/home/thelmuth/Results/plushi/"
-#expdir="/home/thelmuth/Results/elitist-survival-2018/rate-90/lexicase/"
-#expdir="/home/thelmuth/Results/elitist-survival-2018-not-UMAD/rate-100/lexicase/"
-#expdir="/home/thelmuth/Results/elitist-survival-2018-not-UMAD/rate-30/tournament/"
+#expdir="/home/thelmuth/Collab/thelmuth/Results/epigenetic-tags/"
 
-#expdir="/home/thelmuth/Results/UMAD/tournament/size-neutral-add-delete/"
-#expdir="/home/thelmuth/Results/parent-selection-v3-UMAD/epsilon-lexicase/"
-#expdir="/home/thelmuth/Results/elitist-survival-2018/rate-80/lexicase/"
-#expdir="/home/thelmuth/Results/elitist-survival-2018-not-UMAD/rate-50/lexicase/"
+#expdir="/home/thelmuth/Collab/thelmuth/Results/domain-knowledge/kitchen-sink-instructions/"
+
+#expdir="/home/thelmuth/Collab/aabdelha/results2/batch-tournament/"
+
+#expdir="/home/thelmuth/Collab/thelmuth/Results/counterexample-drive-gp/add-case-after-50-gens/"
+#expdir="/home/thelmuth/Collab/thelmuth/Results/counterexample-driven-gp/add-case-after-25-generations/"
+expdir="/home/thelmuth/Collab/thelmuth/Results/counterexample-driven-gp/add-case-after-100-generations/"
 
 declare -a namespaces=(
     "compare-string-lengths"
@@ -51,7 +51,7 @@ declare -a namespaces=(
 
 for namespace in "${namespaces[@]}"
 do
-    #echo "$namespace"
+    echo "$namespace"
     if [ "$1" != "" ]; then
 	python $pythonscript "$expdir$namespace" $1
     else
