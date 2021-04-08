@@ -42,9 +42,10 @@ sizeOfFinalProg = []
 simpSizeOfFinalProg = []
 
 while (outputFilePrefix + str(i) + outputFileSuffix) in dirList:
-    #sys.stdout.write('.')
-    #if i % 50 == 49:
-    #    print
+    sys.stdout.write("%4i" % i)
+    sys.stdout.flush()
+    if i % 25 == 24:
+        print
     
     runs = i + 1 # After this loop ends, runs should be correct
     fileName = (outputFilePrefix + str(i) + outputFileSuffix)

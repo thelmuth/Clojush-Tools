@@ -200,11 +200,15 @@ while (outputFilePrefix + str(i) + outputFileSuffix) in dirList:
             
     i += 1
 
+        
+
+
 if not csv:
     print
 
 
 not_done = []
+not_done_gens = []
 if verbose:
     print "Error threshold per case:", errorThresholdPerCase
     print "-------------------------------------------------"
@@ -228,6 +232,7 @@ if verbose:
         elif not done:
             doneSym = " -- not done"
             not_done.append(i)
+            not_done_gens.append(gen)
         if fitness >= 0.001 or fitness == 0.0:
             print "Run: %3i  | Gen: %5i  | Best Fitness (mean) = %8.4f%s" % (i, gen, fitness, doneSym)
         else:
@@ -289,6 +294,10 @@ else:
 
     print "Not done yet: ",
     for run_i in not_done:
+        sys.stdout.write("%i," % run_i)
+    print
+    print "Not done generations: ",
+    for run_i in not_done_gens:
         sys.stdout.write("%i," % run_i)
     print
     

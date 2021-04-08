@@ -42,23 +42,23 @@ pythonscript="Tools/efficient_mean_fitness_and_solution_counts.py"
 
 #expdir="/home/thelmuth/Results/parent-selection-v3-UMAD/madcap-epsilon-lexicase/semi-dynamic/rate-of-zero-epsilon-0.25/"
 
-expdir="/home/thelmuth/Results/parent-selection-v3-UMAD/downsample-lexicase-range-rate/rate-[0.03,0.3]/"
+expdir="/home/thelmuth/Results/2021-benchmark-problem-development/run-downsampled-lexicase/"
 
 
 
 declare -a namespaces=(
-    "compare-string-lengths"
-    "double-letters"
-    "replace-space-with-newline"
-    "string-lengths-backwards"
-    "last-index-of-zero"
-    "vector-average"
-    "mirror-image"
-    "x-word-lines"
-    "negative-to-zero"
-    "scrabble-score"
-    "smallest"
-    "syllables"
+    # "compare-string-lengths"
+    # "double-letters"
+    # "replace-space-with-newline"
+    # "string-lengths-backwards"
+    # "last-index-of-zero"
+    # "vector-average"
+    # "mirror-image"
+    # "x-word-lines"
+    # "negative-to-zero"
+    # "scrabble-score"
+    # "smallest"
+    # "syllables"
 
     # "number-io"
     # "small-or-large"
@@ -81,31 +81,31 @@ declare -a namespaces=(
     # "word-stats"
 
     #### PSB2
-    # basement
-    # bouncing-balls
-    # bowling
-    # camel-case
-    # coin-sums
-    # cut-vector
-    # dice-game
-    # find-pair
-    # fizz-buzz
-    # fuel-cost
-    # gcd
-    # indices-of-substring
-    # leaders
-    # luhn
-    # mastermind
-    # middle-character
-    # paired-digits
-    # shopping-list
-    # snow-day
-    # solve-boolean
-    # spin-words
-    # square-digits
-    # substitution-cipher
-    # twitter
-    # vector-distance
+    basement
+    bouncing-balls
+    bowling
+    camel-case
+    coin-sums
+    cut-vector
+    dice-game
+    find-pair
+    fizz-buzz
+    fuel-cost
+    gcd
+    indices-of-substring
+    leaders
+    luhn
+    mastermind
+    middle-character
+    paired-digits
+    shopping-list
+    snow-day
+    solve-boolean
+    spin-words
+    square-digits
+    substitution-cipher
+    twitter
+    vector-distance
 
 )
 

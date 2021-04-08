@@ -80,8 +80,10 @@ verbose = True
 #outputDirectory = "Results/lexicase-paper/resub/wc/diversity-figures/tourney7/"
 #outputDirectory = "Results/lexicase-paper/resub/wc/diversity-figures/ifs-size-3/"
 #outputDirectory = "Results/lexicase-paper/resub/wc/diversity-figures/ifs-size-5/"
-outputDirectory = "Results/lexicase-paper/resub/wc/diversity-figures/ifs-size-7/"
+#outputDirectory = "Results/lexicase-paper/resub/wc/diversity-figures/ifs-size-7/"
 
+
+outputDirectory = "Results/2021-benchmark-problem-development/final-run/dice-game/"
 
 outputFilePrefix = "log"
 outputFileSuffix = ".txt"
