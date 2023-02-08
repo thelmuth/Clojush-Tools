@@ -28,8 +28,8 @@ csv = False
 # Set these before running:
 
 #outputDirectory = "Results/wc-new-experiments/UMAD/wc"
-outputDirectory = "Results/wc-new-experiments/old-atom-gens/UMAD/wc"
-
+#outputDirectory = "Results/wc-new-experiments/old-atom-gens/UMAD/wc"
+outputDirectory = "/home/thelmuth/Results/counterexample-driven-gp/add-case-after-50-gens/scrabble-score"
 
 
 
@@ -214,7 +214,7 @@ if verbose:
         if fitness <= errorThresholdPerCase: # This didn't work for counterexample-driven GP        
             doneSym = " <- suc"
             if not done:
-                doneSym += "$$$$$$ ERROR $$$$$$" #Should never get here
+                doneSym += " (on current training set, not full) " #Should never get here
             if len(testFitnessOfBest) > i and testFitnessOfBest[i] < maxint:
                 if isinstance(testFitnessOfBest[i], int):
                     doneSym += " | test = %i" % testFitnessOfBest[i]

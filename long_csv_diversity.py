@@ -1,6 +1,6 @@
 #!/usr/bin/python
-import os
-from sys import maxint
+import os, sys
+
 
 # Set these before running:
 
@@ -113,9 +113,32 @@ from sys import maxint
 #         ("Variance-Inverse", "/home/thelmuth/Results/weighted-lexicase/bias-lexicase/variance-inverse/replace-space-with-newline/")
 #         ]
 
-dirs = [("Regular-Lexicase", "/home/thelmuth/Results/parent-selection-v2/lexicase/replace-space-with-newline"),
-        ("Tournament", "/home/thelmuth/Results/parent-selection-v2/tourney-7/replace-space-with-newline")]
+# dirs = [("Regular-Lexicase", "/home/thelmuth/Results/parent-selection-v2/lexicase/replace-space-with-newline"),
+#         ("Tournament", "/home/thelmuth/Results/parent-selection-v2/tourney-7/replace-space-with-newline")]
 
+
+problems = ["compare-string-lengths",
+            "double-letters",
+            "replace-space-with-newline",
+            "string-lengths-backwards",
+            "last-index-of-zero",
+            "vector-average",
+            "mirror-image",
+            "x-word-lines",
+            "negative-to-zero",
+            "scrabble-score",
+            "smallest",
+            "syllables"
+]
+
+#basedir = "/home/thelmuth/Collab/thelmuth/Results/counterexample-driven-gp/no-generational-case-additions/%s/"
+basedir = "/home/thelmuth/Collab/thelmuth/Results/counterexample-driven-gp/add-case-after-50-gens/%s/"
+
+dirs = []
+
+for problem in problems:
+    tup = (problem, basedir % problem)
+    dirs.append(tup)
 
 
 
@@ -170,7 +193,7 @@ def printBehavioralDiversitiesLong(method, outputDirectory):
  
             if line.startswith("Number of point (instruction) evaluations so far:"):
                 point_evals = int(line.split()[-1])
-                print "%s,%i,%i,%i,%0.3f,%0.3f" % (method, run_num, gen, point_evals, behavioral_diversity, error_vector_diversity)
+                print("%s,%i,%i,%i,%0.3f,%0.3f" % (method, run_num, gen, point_evals, behavioral_diversity, error_vector_diversity))
 
 
             if line.startswith("SUCCESS"):
@@ -188,9 +211,10 @@ def printBehavioralDiversitiesLong(method, outputDirectory):
 
 
 #print "method,run,generation,ptevals,behavioral_diversity"
-print "method,trial,generation,ptevals,behavioral_diversity,error_vector_diversity"
+print("method,trial,generation,ptevals,behavioral_diversity,error_vector_diversity")
 
 for (method, directory) in dirs:
+    print(method, file=sys.stderr)
     printBehavioralDiversitiesLong(method, directory)
 
 # dir_bd_lists = [getBehavioralDiversities(d) for (n,d) in dirs]

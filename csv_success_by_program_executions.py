@@ -8,10 +8,10 @@ import os, sys
 from sys import maxint
 
 # Set these before running:
-problem = "double-letters"
+problem = "vector-average"
 error_threshold = 0
 
-max_executions = 30000000
+max_executions = 75000000
 
 normal_training_cases_size = int(max_executions / (1000 * 300))
 print "Normal training cases size =", normal_training_cases_size
@@ -22,10 +22,17 @@ print "Normal training cases size =", normal_training_cases_size
 #         ("downsample-10", int(normal_training_cases_size * 0.1), "/home/thelmuth/Results/parent-selection-v3-UMAD/downsample-lexicase/rate-0.1/%s" % problem)
 # ]
 
+
 dirs = [#("lexicase", normal_training_cases_size, "/home/thelmuth/Results/parent-selection-v3-UMAD/lexicase/%s" % problem),
         ("CDGP", False, "/home/thelmuth/Collab/thelmuth/Results/counterexample-driven-gp/no-generational-case-additions/%s" % problem),
+        ("CDGPq80", False, "/home/thelmuth/Collab/thelmuth/Results/counterexample-driven-gp/cases-passed-threshold-0.8/%s" % problem),
         ("CDGP50", False, "/home/thelmuth/Collab/thelmuth/Results/counterexample-driven-gp/add-case-after-50-gens/%s" % problem)
 ]
+
+# dirs = [#("lexicase", normal_training_cases_size, "/home/thelmuth/Results/parent-selection-v3-UMAD/lexicase/%s" % problem),
+#         ("CDGP", False, "/home/thelmuth/Collab/thelmuth/Results/counterexample-driven-gp/no-generational-case-additions/%s" % problem),
+#         ("CDGP50", False, "/home/thelmuth/Collab/thelmuth/Results/counterexample-driven-gp/add-case-after-50-gens/%s" % problem)
+# ]
 
 
 for (prob, rate, direct) in dirs:

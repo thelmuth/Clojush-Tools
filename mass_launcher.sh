@@ -12,7 +12,9 @@ pythonscript="Tools/efficient_mean_fitness_and_solution_counts.py"
 
 #expdir="/home/thelmuth/Collab/thelmuth/Results/counterexample-drive-gp/add-case-after-50-gens/"
 #expdir="/home/thelmuth/Collab/thelmuth/Results/counterexample-driven-gp/add-case-after-25-generations/"
-expdir="/home/thelmuth/Collab/thelmuth/Results/counterexample-driven-gp/add-case-after-100-generations/"
+#expdir="/home/thelmuth/Collab/thelmuth/Results/counterexample-driven-gp/add-case-after-100-generations/"
+
+expdir="/home/thelmuth/Collab/ccourtne/UCD-UMAD-test/"
 
 declare -a namespaces=(
     "compare-string-lengths"

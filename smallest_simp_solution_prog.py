@@ -5,6 +5,8 @@ from sys import maxint
 # Set these before running:
 
 
+outputDirectory = "/home/thelmuth/Results/counterexample-driven-gp/add-case-after-50-gens/scrabble-score"
+
 #######################################################################################
 ########################### Parent Selection Experiments ##############################
 #######################################################################################
@@ -136,7 +138,8 @@ from sys import maxint
 
 #outputDirectory = "Results/bench-prog-synth/syllables/parent-selection/lexicase/"
 #outputDirectory = "Results/bench-prog-synth/syllables/parent-selection/tourney-7/"
-outputDirectory = "Results/bench-prog-synth/syllables/parent-selection/ifs-7/"
+#outputDirectory = "Results/bench-prog-synth/syllables/parent-selection/ifs-7/"
+
 
 
 
