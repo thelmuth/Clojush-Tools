@@ -78,7 +78,7 @@ def getSuccessProgExecs(outputDirectory, cases_size):
                 else:
                     simpTestSuccess = False
 
-            if line.startswith("Test total error for best:") and simpTestSuccess != -1:
+            elif line.startswith("Test total error for best:") and simpTestSuccess != -1:
                 try:
                     bestTest = int(line.split()[-1].strip("Nn"))
                 except ValueError, e:
@@ -142,19 +142,3 @@ for (prob, cases_size, directory) in dirs:
 
     print "%s,%i,%i,%i,%i" % (prob, max_executions, train, test, simp)
 
-
-"""
-    print
-    print prob
-    print "Train:", train_success_progexecs
-    print "Test:", test_success_progexecs
-    print "TestSimp:", simplified_test_success_progexecs
-"""
-"""
-    for prog_execs in range(0, max_gens + 1):
-        train_this_prog_execs = numbers_leq_x(train_success_progexecs, prog_execs)
-        test_this_prog_execs =  numbers_leq_x(test_success_progexecs, prog_execs)
-        simp_this_prog_execs =  numbers_leq_x(simplified_test_success_progexecs, prog_execs)
-        
-        print "%s,%i,%i,%i,%i" % (prob, prog_execs, train_this_prog_execs, test_this_prog_execs, simp_this_prog_execs)
-"""

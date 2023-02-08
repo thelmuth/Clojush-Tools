@@ -1,6 +1,7 @@
 #!/usr/bin/python
 import os
 import time
+import sys
 from sys import maxint
 
 # Set these before running:
@@ -80,8 +81,13 @@ verbose = True
 #outputDirectory = "Results/lexicase-paper/resub/wc/diversity-figures/tourney7/"
 #outputDirectory = "Results/lexicase-paper/resub/wc/diversity-figures/ifs-size-3/"
 #outputDirectory = "Results/lexicase-paper/resub/wc/diversity-figures/ifs-size-5/"
-outputDirectory = "Results/lexicase-paper/resub/wc/diversity-figures/ifs-size-7/"
+#outputDirectory = "Results/lexicase-paper/resub/wc/diversity-figures/ifs-size-7/"
 
+outputDirectory = "Results/2021-benchmark-problem-development/final-run/dice-game/"
+
+# This allows this script to take a command line argument for outputDirectory
+if len(sys.argv) > 1:
+    outputDirectory = sys.argv[1]
 
 outputFilePrefix = "log"
 outputFileSuffix = ".txt"
@@ -93,12 +99,17 @@ if outputDirectory[-1] != '/':
     outputDirectory += '/'
 dirList = os.listdir(outputDirectory)
 
+print
+print outputDirectory
+print
+
 start_end_numGens = []
 
 while (outputFilePrefix + str(i) + outputFileSuffix) in dirList:
-    #sys.stdout.write('.')
-    #if i % 50 == 49:
-    #    print
+    sys.stdout.write('.')
+    sys.stdout.flush()
+    if i % 50 == 49:
+       print
     
     runs = i + 1 # After this loop ends, runs should be correct
     fileName = (outputFilePrefix + str(i) + outputFileSuffix)
